@@ -1,0 +1,76 @@
+User
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mapbox Customized Map Design</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+
+    <!-- Including the Mapbox GL CSS file -->
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
+    <!-- Including the Mapbox GL JS file -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
+
+    <link rel="stylesheet" href="map.css" />
+
+    
+  </head>
+
+  <body>
+    <main id="container">
+      <div id="map"></div>
+    </main>
+    <script>
+      // Initialize the Mapbox access token
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiZmdvbnphMiIsImEiOiJjbG9vdWFjcHIwMG5kMmpvMXN5aWkwZXc4In0.GWMxQgk8OVnVI8DwIGcw_w";
+
+      // Create the map object
+      let map = new mapboxgl.Map({
+        container: "map", // container ID
+        style: "mapbox://styles/mapbox/streets-v12", // style URL
+        zoom: 13.5, // starting zoom
+        center: [-122.31509338850782, 47.65922714668673,], // starting center
+      });
+
+      // University District Food Bank Marker
+      new mapboxgl.Marker()
+    .setLngLat([-122.3176455646381, 47.6661020144631])
+    .setPopup(new mapboxgl.Popup({ maxWidth: '500px' }) // Set a maximum width for the popup
+    .setHTML(`
+      <img class="fb-image" src="images/udfb.jpeg" alt="University District Food Bank"/>
+      <h1>University District Food Bank</h1>
+      <p>5017 Roosevelt Way NE, Seattle, WA 98105</p>
+      <p>Phone: (206) 523-7060</p>
+      <p>Hours: Monday - Friday, 9am - 5pm</p>
+      <div class="options">
+        <span>Requests<span>
+      </div>
+    `))
+    .addTo(map);
+      // UW Food Pantry Marker
+    new mapboxgl.Marker()
+    .setLngLat([-122.31413627931678, 47.656910115665006])
+    .addTo(map);
+
+      // Food Resource Network Marker
+      new mapboxgl.Marker()
+    .setLngLat([-122.3120508748807, 47.66491915480083])
+    .addTo(map);
+
+     // Blessed Sacrament Food Bank Marker
+     new mapboxgl.Marker()
+    .setLngLat([-122.31953133633715, 47.66722451690805])
+    .addTo(map);
+
+
+    </script>
+  </body>
+</html>
