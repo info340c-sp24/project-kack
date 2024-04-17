@@ -1,3 +1,30 @@
-main {
+body {
     background-image: url("../images/map-ss.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.navbar a {
+    color: black;
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+    body {
+        background-size: contain;
+    }
+}
+
+/* For screens between 600px and 1200px */
+@media (min-width: 601px) and (max-width: 1200px) {
+    body {
+        background-size: cover;
+    }
+}
+
+/* For screens larger than 1200px */
+@media (min-width: 1201px) {
+    body {
+        background-size: cover;
+    }
 }
