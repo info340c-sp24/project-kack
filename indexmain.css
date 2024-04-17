@@ -20,36 +20,78 @@
     height: 70px;
 }
 
-.logo{
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-ul{
+.flex-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    position: relative; 
 }
 
-ul li{
-    list-style: none;
-    margin-left: 62px;
-    margin-top: 27px;
-    font-size: 14px;
+.nourishing-hope {
+    position: absolute;
+    right: 15%;
+    width: 300px;
+    padding: 40px;
+    text-align: left; 
+    font-family: 'Nunito Sans', Arial, sans-serif;
 }
 
-ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-family: Arial;
-    font-weight: bold;
-    transition: 0.4s ease-in-out;
+.nourishing-hope h1 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px; 
 }
 
-ul li a:hover{
-    color: #ff7200;
+.nourishing-hope p {
+    color: white; 
+    font-weight: 400;
+    font-size: 1em;
 }
+.read-more {
+    padding: 10px 20px; 
+    background-color: transparent; 
+    color: white; 
+    border: 3px solid white;
+    border-radius: 30px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    font-family: 'Nunito Sans', Arial, sans-serif; 
+    font-size: 16px; 
+    font-weight: 700; 
+    text-transform: uppercase;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    outline: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.read-more:hover {
+    background-color: rgb(252, 31, 94); 
+    color: white; 
+    border-color: white; 
+}
+.red-box {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    width: 100%;
+    height: 120px; 
+    z-index: 100;
+    overflow: hidden; 
+}
+
+.red-box::before {
+    content: '';
+    position: absolute;
+    left: 0%;
+    right: -2000px;
+    bottom: 0;
+    height: 150%; 
+    background-color: #C55C78; 
+    transform: skewY(-2deg); 
+    transform-origin: bottom right;
+}
+
 
