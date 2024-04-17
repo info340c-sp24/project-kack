@@ -1,0 +1,32 @@
+table {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+th {
+  height: 2rem;
+  text-align: left;
+  color: #1db954;
+  background-color: #d3d3d3;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+th,
+td {
+  padding: 0.5em;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+tbody > tr:nth-child(even) {
+  background-color: #eee;
+}
+
+tbody > tr:hover {
+  background-color: pink;
+}
