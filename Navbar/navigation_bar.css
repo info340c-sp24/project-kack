@@ -9,7 +9,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     background: transparent;
-    color: white;
+    color: #ffffff;
     position: absolute;
     width: 89%;
     top: 0;
@@ -18,7 +18,7 @@ body {
   
   .navbar a {
     text-decoration: none;
-    color: #FFC0CB; /* word color */
+    color: #000000; /* word color */
     padding: 5px 8px; /* padding */
     transition: color 0.3s;
     font-weight: bold; 
