@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    background-color: #C55C78; /* Adjust the color to match your theme */
+    padding: 20px 0; /* Padding on top and bottom */
+    width: 250px; /* Adjust the width as necessary */
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 100; /* Stay on top of other content */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+.sidebar a {
+    display: block;
+    margin: 18px 0; /* Add margin for spacing between links */
+    text-decoration: none;
+    color: #ffffff; /* Black text color */
+    transition: 0.3s;
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.sidebar a:hover {
+    background-color: #8d0a0a; /* Light purple, for hover effect */
+    color: #ffffff; /* White text color on hover */
+}
+
+.sidebar .logo {
+    margin-bottom: 50px; /* Space below logo */
+}
+
+.sidebar .logo img {
+    width: 50%; /* Adjust the logo width */
+    padding: 10px; /* Add some padding around the logo */
+}
+
+.sidebar-links {
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+}
+
+.content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+}
+
+.hamburger-menu .material-symbols-outlined {
+    font-size: 2.5rem;
+    color: #000000; 
+}
+
+.hamburger-menu,.smaller_logo {
+    display: none; 
+}
+
+
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .smaller_logo {
+        max-width: 60px; 
+        max-height: 60px; 
+    }
+
+    .hamburger-menu,.smaller_logo {
+        display: block; 
+    }
+}
+
+@media (min-width: 769px) {
+    /* ... */
+    .hamburger-menu {
+        display: none; 
+    }
+}

@@ -56,3 +56,34 @@ body {
   vertical-align: middle;
   transition: color 0.3s;
 }
+
+.hamburger-menu .material-symbols-outlined {
+  font-size: 2.5rem; 
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: flex-end; /* Only the Register/login and menu buttons are displayed*/
+    padding: 10px;
+  }
+
+  .hamburger-menu, .navbar a.login {
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .nav-center {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar a.logo, .nav-center, .navbar a.login {
+    display: inline-block; /*all element in bigger than 769 */
+  }
+
+  .hamburger-menu {
+    display: none; /* hidding hamber in > 769 */
+  }
+}
