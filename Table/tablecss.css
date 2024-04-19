@@ -1,8 +1,15 @@
+#title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 table {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.d-flex {
+  flex-direction: column;
 }
 
 th {
@@ -27,4 +34,20 @@ tbody > tr:nth-child(odd) {
 
 tbody > tr:hover {
   background-color: black;
+}
+
+#pre,
+#next {
+  background-color: #f2c5c5;
+  color: white;
+  padding: 0.5em;
+  border: 1px solid #d3d3d3;
+  text-decoration: none;
+  margin: 2px;
+}
+
+@media (min-width: 768px) {
+  .d-flex {
+    flex-direction: row;
+  }
 }
