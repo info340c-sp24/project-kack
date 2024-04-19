@@ -62,8 +62,6 @@ body {
 }
 
 
-
-
 @media (max-width: 768px) {
     .sidebar {
         display: none;
@@ -80,7 +78,6 @@ body {
 }
 
 @media (min-width: 769px) {
-    /* ... */
     .hamburger-menu {
         display: none; 
     }
