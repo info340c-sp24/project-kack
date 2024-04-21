@@ -1,0 +1,113 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    background-color: #000;
+}
+
+.container {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 100px;
+    border-radius: 15px;
+}
+
+.heading {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    display: block;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-row label, .input-row input {
+    width: 100%;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="submit"] {
+    width: 100%; /* This will make all input boxes the same width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="tel"]::placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: red;
+}
+
+footer {
+    color: white;
+    margin-top: 30rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Styles for screens wider than 600px */
+@media (min-width: 600px) {
+    .container {
+        width: 100%; /* Adjusted to use full width */
+    }
+
+    .input-row {
+        flex-direction: row;
+        gap: 15px; /* Reduced gap for larger screens */
+    }
+
+    .input-row label{
+        flex: 1;
+        min-width: 100px; /* Flex property adjusted to allocate equal space */
+    }
+    .input-row input {
+        flex: 2;
+    }
+
+    footer {
+        margin-top: initial; /* Resetting to default value */
+        font-size: x-small; /* Resetting to default value */
+        text-align: center;
+
+    }
+}
