@@ -11,28 +11,16 @@ body {
   display: none; /* Sidebar is hidden by default on small screens */
 }
 
-.smaller_logo {
-  flex-direction: row;
-}
-
-.hamburger-menu {
-  display: block; /* These are displayed by default on small screens */
+.hamburger-menu,
+.small-logo {
   position: absolute;
-  display: flex;
   width: 50px;
   height: 50px;
   background-color: #c55c78;
 }
 
-/* Styles for links and logo on small screens, if necessary */
-.sidebar a {
-  /* Default mobile styles for sidebar links */
-  text-decoration: none;
-  color: #ffffff;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1em; /* Smaller font size for mobile */
-  padding: 1rem;
+.small-logo {
+  position: center;
 }
 
 main {
