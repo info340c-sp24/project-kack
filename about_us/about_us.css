@@ -6,13 +6,15 @@
         url(../images/1.jpeg);
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
+
 body {
     font-family: 'Nunito Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: white; /* Default text color */
+    background-color: #000;
 }
 
 .container {
@@ -70,6 +72,9 @@ body {
 }
 
 @media (min-width: 768px) {
+    .container {
+        height: 85vh;
+    }
     .team-section {
         flex-direction: row;
         flex-wrap: wrap;
