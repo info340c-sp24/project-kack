@@ -96,8 +96,15 @@ footer {
         width: 100%; /* Photo takes full width of container */
         max-width: 150px; /* Adjust photo size as needed */
     }
+<<<<<<< HEAD
     .footer {
         margin-top: 0.5rem;
+=======
+    footer {
+        text-align: center;
+        margin-top: -5rem;
+        font-size: 0.8rem;
+>>>>>>> 345b8e25a634d98eeed646cf9d282ac555f1926f
     }
 }
 
