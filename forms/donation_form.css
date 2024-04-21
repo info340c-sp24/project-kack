@@ -80,6 +80,9 @@ input[type="submit"]:hover {
 
 footer {
     color: white;
+    margin-top: 30rem;
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 /* Styles for screens wider than 600px */
@@ -104,6 +107,7 @@ footer {
     footer {
         margin-top: initial; /* Resetting to default value */
         font-size: initial; /* Resetting to default value */
+        text-align: center;
 
     }
 }

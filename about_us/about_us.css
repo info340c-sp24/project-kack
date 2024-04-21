@@ -96,6 +96,9 @@ footer {
         width: 100%; /* Photo takes full width of container */
         max-width: 150px; /* Adjust photo size as needed */
     }
+    .footer {
+        margin-top: 0.5rem;
+    }
 }
 
 
