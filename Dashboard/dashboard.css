@@ -1,0 +1,29 @@
+/* CSS styles for the sidebar */
+.sidebar {
+  width: 200px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  float: left;
+}
+
+/* CSS styles for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* CSS styles for the cards */
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: #f1f1f1;
+  margin: 20px;
+  float: left;
+}
