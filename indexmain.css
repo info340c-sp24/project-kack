@@ -7,7 +7,12 @@
             background-position: center;
             background-size: cover;
             height: 100vh;
-            flex: 1;
+            flex-grow: 1;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         .navbar a{
             color: white;
@@ -91,12 +96,14 @@
         .foodbank-list-section h2 {
             font-size: 2rem; /* Adjust the size as necessary */
             font-weight: bold;
-            margin-bottom: 0.5rem; /* Adjust the space between the title and subtitle */
+            margin-bottom: 0.5rem;
+            margin-left: 20px; /* Adjust the space between the title and subtitle */
         }
 
         .foodbank-list-section p {
             font-size: 1rem; /* Adjust the size as necessary */
             margin-bottom: 1.5rem;
+            margin-left: 20px;
             /* Space between subtitle and cards */
         }
         .foodbank-list-title {
@@ -154,6 +161,11 @@
         .btn-details:hover {
             background-color: #666;
         }
+        .footer{
+            margin-top: 1205px;
+            font-size: x-small;
+            text-align: center;
+        }
         
 
         /* ... Your existing .foodbank-card hover and .btn-details styles ... */
@@ -201,6 +213,17 @@
                 padding: 10px;
                 text-align: left;
             }
+            .foodbank-list-section h2 {
+                font-size: 2rem; /* Adjust the size as necessary */
+                font-weight: bold;
+                margin-bottom: 0.5rem; /* Adjust the space between the title and subtitle */
+            }
+    
+            .foodbank-list-section p {
+                font-size: 1rem; /* Adjust the size as necessary */
+                margin-bottom: 1.5rem;
+                /* Space between subtitle and cards */
+            }
             
 
             .foodbank-list-title {
@@ -230,7 +253,12 @@
 
             .btn-details {
                 margin-left: 20px; /* Space before the button */
-            }
+            }  
+            .footer{
+                margin-top: 705px;
+                font-size: x-small;
+                text-align: center;
+            } 
             
         }
 

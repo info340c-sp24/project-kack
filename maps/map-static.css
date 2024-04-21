@@ -119,4 +119,9 @@ body {
 
     /* Add other styles specific to larger screens as needed */
 }
+footer {
+    background-color: rgba(255, 255, 255, 0.7); /* white with 80% opacity */
+    padding: 10px 0; /* Add some vertical padding */
+    text-align: center; /* Center the text if desired */
+}
 
