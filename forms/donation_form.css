@@ -80,10 +80,6 @@ input[type="submit"]:hover {
 
 footer {
     color: white;
-    margin-top: 30rem; /* Adjusted from 30rem to auto for better mobile layout */
-    font-size: 0.7rem;
-    text-align: center;
-
 }
 
 /* Styles for screens wider than 600px */

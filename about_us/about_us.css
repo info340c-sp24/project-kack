@@ -70,6 +70,11 @@ body {
 .team-member p {
     font-size: 0.9rem;
 }
+footer {
+    text-align: center;
+    margin-top: 25rem;
+    font-size: 0.8rem;
+}
 
 @media (min-width: 768px) {
     .container {
@@ -93,8 +98,4 @@ body {
     }
 }
 
-@media (min-width: 992px) {
-    .team-member {
-        width: calc(33.333% - 40px); /* Three members per row with gap */
-    }
-}
+
