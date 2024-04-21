@@ -106,7 +106,7 @@ footer {
 
     footer {
         margin-top: initial; /* Resetting to default value */
-        font-size: initial; /* Resetting to default value */
+        font-size: x-small; /* Resetting to default value */
         text-align: center;
 
     }
