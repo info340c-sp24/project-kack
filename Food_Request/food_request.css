@@ -1,108 +1,31 @@
-body {
+table {
+  list-style-type: none;
+  padding: 20px;
   margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Arial, sans-serif;
+  background-color: #c55c78;
+  display: flex;
+  border-radius: 10px;
+  table-layout: fixed;
   border-collapse: collapse;
 }
 
-/* Default styles for mobile screens */
-.sidebar {
-  display: none; /* Sidebar is hidden by default on small screens */
+.requests {
+  display: inline;
+  color: white;
 }
 
-.nav-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px; /* Adjust padding to your preference */
-}
-
-nav a {
-  font-size: 2.5rem;
+button {
+  background-color: white;
   color: black;
-  margin-right: 0.5em;
-}
-
-#small-logo > img {
-  display: block; /* Center the logo */
-  margin: 0 auto; /* Auto margins will center the logo */
-  max-width: 100px; /* Adjust the width to your preference */
-  height: auto; /* Keep aspect ratio */
-}
-
-.sidebar-links {
-  display: none; /* Hide links by default */
+  border: none;
+  padding: 20px 20px;
+  text-align: center;
   text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 10px 10px;
 }
 
-.login {
-  flex-shrink: 0;
-}
-
-main {
-  padding: 1rem;
-}
-
-footer {
-  display: none;
-}
-
-/* Media query for larger screens */
-@media (min-width: 769px) {
-  .sidebar {
-    display: flex; /* Show sidebar for larger screens */
-    background-color: #c55c78; /* Adjust the color to match your theme */
-    width: 175px; /* Adjust the width as necessary */
-    height: 100%; /* Full height */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    flex-direction: column; /* Stack children vertically */
-    top: 0;
-    left: 0;
-    margin: 0;
-    color: white;
-  }
-
-  .sidebar a {
-    margin: 18px 0; /* Add margin for spacing between links */
-    font-size: 1.5em; /* Restoring larger font size for larger screens */
-    text-align: left;
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-  }
-
-  .sidebar a:hover {
-    background-color: #8d0a0a; /* Light purple, for hover effect */
-  }
-
-  .logo {
-    margin-bottom: 20px; /* Space below logo */
-  }
-
-  .hamburger-menu,
-  .login,
-  .small-logo {
-    display: none; /* Hide these for larger screens */
-  }
-
-  main,
-  footer {
-    margin-left: 180px;
-  }
-
-  hr {
-    display: none;
-  }
-
-  .footer {
-    margin-top: auto;
-    display: block;
-  }
-
-  .title {
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
+.first {
+  width: 50%;
 }

@@ -35,7 +35,8 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <!-- link to CSS -->
-    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="food_request.css" />
+    <link rel="stylesheet" href="../Sidebar/sidebar.css" />
   </head>
   <body>
     <div class="container-fluid">
@@ -56,17 +57,64 @@
           <a href="../index.html" class="logo">
             <img src="../images/Kack_icon.png" alt="KACK Logo" />
           </a>
-          <a
-            href="../Dashboard/dashboard.html"
-            style="background-color: #8d0a0a"
-            >Dashboard</a
-          >
+          <a href="../Dashboard/dashboard.html">Dashboard</a>
           <a href="../Table/table.html">Donors</a>
-          <a href="food_request.html">Requests</a>
+          <a href="food_request.html" style="background-color: #8d0a0a"
+            >Requests</a
+          >
         </div>
       </nav>
       <hr />
-      <main></main>
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-xs-4">
+              <h2>FOOD REQUESTS</h2>
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="first">Request 1</td>
+                    <td>
+                      <button>ADD</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first">Request 2</td>
+                    <td>
+                      <button>ADD</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first">Request 3</td>
+                    <td>
+                      <button>ADD</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first">Request 4</td>
+                    <td>
+                      <button>ADD</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first">Request 5</td>
+                    <td>
+                      <button>ADD</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-4">
+              <h2>YOUR GIFTS</h2>
+              <div class="card">
+                <p>Adding food request</p>
+                <button>REMOVE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
   <footer class="footer">
