@@ -1,89 +1,95 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.navbar {
+.nav-top {
   display: flex;
-  justify-content: start; /* Updated from 'space-between' to 'start' */
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background: transparent;
-  color: #ffffff;
-  position: absolute;
-  width: 95%; /* Updated to 100% */
-  top: 0;
-  z-index: 100;
+  padding: 10px; /* Adjust padding to your preference */
 }
 
-/* Add this new class for the grouping of center navigation links */
-.nav-center {
-  display: flex;
-  justify-content: center;
-  flex: 1; /* Allows the center links to take up available space */
-  gap: 30px; /* Adjust this value as needed to bring links closer or further apart */
+nav a {
+  font-size: 2.5rem;
+  color: white;
+  margin-right: 0.5em;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #000000; /* word color */
-  padding: 5px 8px; /* padding around the links */
-  transition: color 0.3s;
-  font-weight: bold; 
-  font-size: 1.1em;
+#small-logo > img {
+  display: block; /* Center the logo */
+  margin: 0 auto; /* Auto margins will center the logo */
+  max-width: 100px; /* Adjust the width to your preference */
+  height: auto; /* Keep aspect ratio */
 }
 
-.navbar a:hover, .navbar a:hover .material-symbols-outlined {
-  color: rgb(252, 31, 94);
-}
-
-.logo img {
-  height: 40px;
-  margin-right: 5px;
-}
-
-/* Make sure these elements don't stretch and stay at their content's width */
-.logo, .login {
-  flex-shrink: 0;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24;
-  vertical-align: middle;
-  transition: color 0.3s;
-}
-
-.hamburger-menu .material-symbols-outlined {
-  font-size: 2.5rem; 
-}
-
-
-@media (max-width: 768px) {
-  .navbar {
-    justify-content: flex-end; /* Only the Register/login and menu buttons are displayed*/
-    padding: 10px;
-  }
-
-  .hamburger-menu, .navbar a.login {
-    display: inline-block;
-    flex-shrink: 0;
-  }
-
-  .nav-center {
-    display: none;
-  }
+footer {
+  display: none;
 }
 
 @media (min-width: 769px) {
-  .navbar a.logo, .nav-center, .navbar a.login {
+  .navbar {
+    display: none;
+    justify-content: start; /* Updated from 'space-between' to 'start' */
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent;
+    color: #ffffff;
+    position: absolute;
+    width: 95%; /* Updated to 100% */
+    top: 0;
+    z-index: 100;
+  }
+
+  /* Add this new class for the grouping of center navigation links */
+  .nav-center {
+    display: flex;
+    justify-content: center;
+    flex: 1; /* Allows the center links to take up available space */
+    gap: 30px; /* Adjust this value as needed to bring links closer or further apart */
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #000000; /* word color */
+    padding: 5px 8px; /* padding around the links */
+    transition: color 0.3s;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  .navbar a:hover,
+  .navbar a:hover .material-symbols-outlined {
+    color: rgb(252, 31, 94);
+  }
+
+  .logo img {
+    height: 40px;
+    margin-right: 5px;
+  }
+
+  /* Make sure these elements don't stretch and stay at their content's width */
+  .logo,
+  .login {
+    flex-shrink: 0;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    vertical-align: middle;
+    transition: color 0.3s;
+  }
+
+  .hamburger-menu .material-symbols-outlined {
+    font-size: 2.5rem;
+  }
+
+  .navbar a.logo,
+  .nav-center,
+  .navbar a.login {
     display: inline-block; /*all element in bigger than 769 */
   }
 
   .hamburger-menu {
     display: none; /* hidding hamber in > 769 */
+  }
+
+  .nav-top {
+    display: none;
   }
 }

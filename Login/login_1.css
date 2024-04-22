@@ -1,11 +1,69 @@
-img {
-  width: 200px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin: 0 auto; /* Center the logo horizontally */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-left: 5%;
+  background-color: #fce9e9;
 }
 
-button {
+/* Default (Mobile) styles, with centered content */
+.container {
   display: flex;
-  justify-content: center;
-  margin: 0 10px; /* Adjust the spacing between buttons */
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  text-align: center;
+  min-height: 100vh; /* Full viewport height */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.logo {
+  width: 100%; /* Mobile logo size, adjust as needed */
+  height: auto;
+  margin-bottom: 1rem;
+  margin: 0 auto; /* This centers the image block inside .logo-section */
+}
+
+h1, h2 {
+  color: #d12317; /* This should be the color of your logo */
+  
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.option-button {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: auto;
+  transition: background-color 0.3s; /* Smooth transition for the hover effect */
+}
+
+.option-button:hover {
+  background-color: #ccc; /* A darker shade for the hover state */
+}
+
+/* Styles for screens larger than 768px */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 100%; /* Adjust based on actual size */
+    max-width: 300px; /* Adjust to the size of your desktop logo */
+  }
+
+  .option-button {
+    width: 200px; /* Fixed width for buttons on desktop */
+    padding: 10px 20px;
+  }
 }
