@@ -1,106 +1,113 @@
-.main{
-    width: 100%;
-    padding-top: 100px; /* Adjust this value as needed to move content down */
-    background: 
-        linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
-        url(../images/1.jpeg);
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;
+.main {
+  width: 100%;
+  padding-top: 100px; /* Adjust this value as needed to move content down */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/1.jpeg);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 body {
-    font-family: 'Nunito Sans', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: white; /* Default text color */
-    background-color: #000;
+  font-family: "Nunito Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white; /* Default text color */
+  background-color: #000;
+}
+.navbar {
+  display: none;
 }
 
 .container {
-    max-width: 1000px; /* or any other max-width you prefer */
-    margin: 0 auto;
-    padding: 40px; /* Adjust the padding to create more space */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for legibility */
-    border-radius: 8px; /* Optional: rounded corners for the container */
+  max-width: 1000px; /* or any other max-width you prefer */
+  margin: 0 auto;
+  padding: 40px; /* Adjust the padding to create more space */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for legibility */
+  border-radius: 8px; /* Optional: rounded corners for the container */
 }
 
 .heading {
-    text-align: center;
-    color: white;
-    margin-bottom: 30px; /* Space below the heading */
+  text-align: center;
+  color: white;
+  margin-bottom: 30px; /* Space below the heading */
 }
 .team {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 .aboutus-page {
-    padding: 20px 0; /* Add more padding at the top and bottom */
+  padding: 20px 0; /* Add more padding at the top and bottom */
 }
 .aboutus-page h3,
 .team-member h3 {
-    color: #C55C78; /* Optional: a lighter color for headings */
+  color: #c55c78; /* Optional: a lighter color for headings */
 }
 .aboutus-page p {
-    line-height: 1.6; /* Increase line-height for better readability */
-    margin-bottom: 15px; /* Space below each paragraph */
-    text-align: justify; /* Optional: justify the text for better alignment */
+  line-height: 1.6; /* Increase line-height for better readability */
+  margin-bottom: 15px; /* Space below each paragraph */
+  text-align: justify; /* Optional: justify the text for better alignment */
 }
 
-
-
 .team-member {
-    flex-basis: calc(33.333% - 60px); /* subtract twice the gap */
-    text-align: center;
+  flex-basis: calc(33.333% - 60px); /* subtract twice the gap */
+  text-align: center;
 }
 
 .team-member img {
-    width: 100%;
-    border-radius: 50%;
-    margin-bottom: 10px;
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .team-member h3 {
-    margin: 0;
-    color: white;
+  margin: 0;
+  color: white;
 }
 
 .team-member p {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 footer {
-    text-align: center;
-    margin-top: 25rem;
-    font-size: 0.8rem;
+  text-align: center;
+  margin-top: 25rem;
+  font-size: 0.8rem;
 }
 
 @media (min-width: 768px) {
-    .container {
-        height: 85vh;
-    }
-    .team-section {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .container {
+    height: 85vh;
+  }
+  .team-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .team-member {
-        width: calc(50% - 40px); /* Two members per row with gap */
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
+  .team-member {
+    width: calc(50% - 40px); /* Two members per row with gap */
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
 
-    .team-photo {
-        width: 100%; /* Photo takes full width of container */
-        max-width: 150px; /* Adjust photo size as needed */
-    }
-    footer {
-        text-align: center;
-        margin-top: 0rem;
-        font-size: x-small;
-    }
+  .team-photo {
+    width: 100%; /* Photo takes full width of container */
+    max-width: 150px; /* Adjust photo size as needed */
+  }
+  footer {
+    text-align: center;
+    margin-top: 0rem;
+    font-size: x-small;
+  }
+
+  .navbar {
+    display: block;
+  }
 }
-
-
