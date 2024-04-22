@@ -6,7 +6,6 @@ body {
   border-collapse: collapse;
 }
 
-/* HTML: <div class="loader"></div> */
 .loader {
   width: 60px;
   aspect-ratio: 1;
@@ -43,7 +42,6 @@ body {
   }
 }
 
-/* HTML: <div class="loader"></div> */
 .loader2 {
   width: 80px;
   aspect-ratio: 1.154;
@@ -80,7 +78,6 @@ body {
   }
 }
 
-/* HTML: <div class="loader"></div> */
 .loader3 {
   width: 60px;
   aspect-ratio: 1;
@@ -100,16 +97,15 @@ body {
   }
 }
 
-/* Default styles for mobile screens */
 .sidebar {
-  display: none; /* Sidebar is hidden by default on small screens */
+  display: none;
 }
 
 .nav-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px; /* Adjust padding to your preference */
+  padding: 10px;
 }
 
 nav a {
@@ -119,14 +115,14 @@ nav a {
 }
 
 #small-logo > img {
-  display: block; /* Center the logo */
-  margin: 0 auto; /* Auto margins will center the logo */
-  max-width: 100px; /* Adjust the width to your preference */
-  height: auto; /* Keep aspect ratio */
+  display: block;
+  margin: 0 auto;
+  max-width: 100px;
+  height: auto;
 }
 
 .sidebar-links {
-  display: none; /* Hide links by default */
+  display: none;
   text-decoration: none;
 }
 
@@ -142,15 +138,14 @@ footer {
   display: none;
 }
 
-/* Media query for larger screens */
 @media (min-width: 769px) {
   .sidebar {
-    display: flex; /* Show sidebar for larger screens */
-    background-color: #c55c78; /* Adjust the color to match your theme */
-    width: 175px; /* Adjust the width as necessary */
-    height: 100%; /* Full height */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    flex-direction: column; /* Stack children vertically */
+    display: flex;
+    background-color: #c55c78;
+    width: 175px;
+    height: 100%;
+    position: fixed;
+    flex-direction: column;
     top: 0;
     left: 0;
     margin: 0;
@@ -158,8 +153,8 @@ footer {
   }
 
   .sidebar a {
-    margin: 18px 0; /* Add margin for spacing between links */
-    font-size: 1.5em; /* Restoring larger font size for larger screens */
+    margin: 18px 0;
+    font-size: 1.5em;
     text-align: left;
     color: white;
     text-decoration: none;
@@ -168,17 +163,17 @@ footer {
   }
 
   .sidebar a:hover {
-    background-color: #8d0a0a; /* Light purple, for hover effect */
+    background-color: #8d0a0a;
   }
 
   .logo {
-    margin-bottom: 20px; /* Space below logo */
+    margin-bottom: 20px;
   }
 
   .hamburger-menu,
   .login,
   .small-logo {
-    display: none; /* Hide these for larger screens */
+    display: none;
   }
 
   main,
@@ -243,7 +238,6 @@ tbody > tr:hover {
   }
 }
 
-/* CSS styles for the cards */
 .card {
   width: 300px;
   height: 200px;
