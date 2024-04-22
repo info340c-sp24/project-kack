@@ -35,11 +35,11 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <!-- link to CSS -->
-    <link rel="stylesheet" href="food_request.css" />
     <link rel="stylesheet" href="../Sidebar/sidebar.css" />
+    <link rel="stylesheet" href="food_request.css" />
   </head>
   <body>
-    <div class="container-fluid">
+    <div>
       <nav>
         <!-- Sidebar content here... -->
         <div class="nav-top">
@@ -64,53 +64,85 @@
           >
         </div>
       </nav>
+      5nh
       <hr />
       <main>
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
-            <div class="col-md-8 col-xs-4">
-              <h2>FOOD REQUESTS</h2>
-              <table>
+            <div class="col-md-12">
+              <h1>Food Request</h1>
+              <form>
+                <div class="form-group">
+                  <label for="name">Food Type</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter food type"
+                  />
+                  <label for="specific-food">Specific Food</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="specific-food"
+                    placeholder="Enter Specific Food"
+                  />
+                  <label for="quantity">Quantity</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="quantity"
+                    placeholder="Enter quantity"
+                  />
+                  <label for="date">Pickup Date</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="date"
+                    placeholder="Enter pickup date"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Current Requests</h1>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Food Type</th>
+                    <th scope="col">Specific Food</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Pickup Date</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
-                    <td class="first">Request 1</td>
-                    <td>
-                      <button>ADD</button>
-                    </td>
+                    <td>Protein</td>
+                    <td>Chicken</td>
+                    <td>10</td>
+                    <td>12/12/2024</td>
+                    <td><button class="btn btn-primary">Remove</button></td>
                   </tr>
                   <tr>
-                    <td class="first">Request 2</td>
-                    <td>
-                      <button>ADD</button>
-                    </td>
+                    <td>Vegetable</td>
+                    <td>Carrot</td>
+                    <td>5</td>
+                    <td>12/12/2024</td>
+                    <td><button class="btn btn-primary">Remove</button></td>
                   </tr>
                   <tr>
-                    <td class="first">Request 3</td>
-                    <td>
-                      <button>ADD</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="first">Request 4</td>
-                    <td>
-                      <button>ADD</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="first">Request 5</td>
-                    <td>
-                      <button>ADD</button>
-                    </td>
+                    <td>Grain</td>
+                    <td>Rice</td>
+                    <td>20</td>
+                    <td>12/12/2024</td>
+                    <td><button class="btn btn-primary">Remove</button></td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <div class="col-md-4">
-              <h2>YOUR GIFTS</h2>
-              <div class="card">
-                <p>Adding food request</p>
-                <button>REMOVE</button>
-              </div>
             </div>
           </div>
         </div>
