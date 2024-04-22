@@ -1,6 +1,6 @@
 .main {
   height: 100%;
-  padding-top: 100px; /* Adjust this value as needed to move content down */
+  padding-top: 100px;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../images/1.jpeg);
   background-position: center;
@@ -13,7 +13,7 @@ body {
   font-family: "Nunito Sans", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: white; /* Default text color */
+  color: white; 
   background-color: #000;
   display: flex;
 }
@@ -22,22 +22,22 @@ body {
 }
 
 .container {
-  max-width: 1000px; /* or any other max-width you prefer */
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 40px; /* Adjust the padding to create more space */
+  padding: 40px; 
   background-color: rgba(
     0,
     0,
     0,
     0.5
-  ); /* Semi-transparent background for legibility */
-  border-radius: 8px; /* Optional: rounded corners for the container */
+  );
+  border-radius: 8px; 
 }
 
 .heading {
   text-align: center;
   color: white;
-  margin-bottom: 30px; /* Space below the heading */
+  margin-bottom: 30px; 
 }
 .team {
   display: flex;
@@ -46,20 +46,20 @@ body {
   justify-content: center;
 }
 .aboutus-page {
-  padding: 20px 0; /* Add more padding at the top and bottom */
+  padding: 20px 0;
 }
 .aboutus-page h3,
 .team-member h3 {
-  color: #c55c78; /* Optional: a lighter color for headings */
+  color: #c55c78; 
 }
 .aboutus-page p {
-  line-height: 1.6; /* Increase line-height for better readability */
-  margin-bottom: 15px; /* Space below each paragraph */
-  text-align: justify; /* Optional: justify the text for better alignment */
+  line-height: 1.6;
+  margin-bottom: 15px; 
+  text-align: justify; 
 }
 
 .team-member {
-  flex-basis: calc(33.333% - 60px); /* subtract twice the gap */
+  flex-basis: calc(33.333% - 60px);
   text-align: center;
 }
 
@@ -94,14 +94,14 @@ footer {
   }
 
   .team-member {
-    width: calc(50% - 40px); /* Two members per row with gap */
+    width: calc(50% - 40px);
     padding: 0 20px;
     box-sizing: border-box;
   }
 
   .team-photo {
-    width: 100%; /* Photo takes full width of container */
-    max-width: 150px; /* Adjust photo size as needed */
+    width: 100%; 
+    max-width: 150px; 
   }
   footer {
     text-align: center;

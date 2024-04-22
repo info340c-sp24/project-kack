@@ -56,7 +56,7 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="submit"] {
-  width: 100%; /* This will make all input boxes the same width */
+  width: 100%; 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -94,28 +94,28 @@ footer {
     text-align: center;
 }
 
-/* Styles for screens wider than 600px */
+
 @media (min-width: 600px) {
   .container {
-    width: 100%; /* Adjusted to use full width */
+    width: 100%; 
   }
 
   .input-row {
     flex-direction: row;
-    gap: 15px; /* Reduced gap for larger screens */
+    gap: 15px; 
   }
 
   .input-row label {
     flex: 1;
-    min-width: 100px; /* Flex property adjusted to allocate equal space */
+    min-width: 100px; 
   }
   .input-row input {
     flex: 2;
   }
 
   footer {
-    margin-top: initial; /* Resetting to default value */
-    font-size: x-small; /* Resetting to default value */
+    margin-top: initial; 
+    font-size: x-small; 
     text-align: center;
   }
 
