@@ -80,7 +80,7 @@ input[type="submit"]:hover {
 
 footer {
     color: white;
-    margin-top: 30rem;
+    margin-top: auto;
     font-size: 0.8rem;
     text-align: center;
 }
