@@ -144,24 +144,24 @@
     box-shadow: 8px 8px 16px #e6d1dc, -8px -8px 16px #f9f9f9;
     border: none;
     outline: none;
-    text-decoration: none; /* Removes underline from links */
+    text-decoration: none; 
     text-align: center
   }
 
   .submit_bottom {
-    display: inline-block; /* Makes the link behave like a button */
-    background-color: #C55C78; /* Button background color */
-    color: #f9f9f9; /* Text color, change as needed */
-    border: 1px solid #dddddd; /* Button border */
+    display: inline-block; 
+    background-color: #C55C78; 
+    color: #f9f9f9; 
+    border: 1px solid #dddddd; 
 
-    border-radius: 25px; /* Rounded corners for the button */
-    padding: 15px 20px; /* Padding inside the button */
-    font-size: 1rem; /* Text size */
-    text-decoration: none; /* Removes underline from links */
-    text-align: center; /* Centers the text inside the button */
-    cursor: pointer; /* Shows a pointer cursor on hover */
-    margin-bottom: 10px; /* Space below the button */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    border-radius: 25px; 
+    padding: 15px 20px; 
+    font-size: 1rem; 
+    text-decoration: none; 
+    text-align: center; 
+    cursor: pointer;
+    margin-bottom: 10px; 
+    transition: background-color 0.3s, color 0.3s; 
     margin-left: 5%;
     border-radius: 25px;
 
