@@ -33,22 +33,34 @@ h1, h2 {
 h2 {
   margin-bottom: 1rem;
 }
-
 .option-button {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  padding: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-bottom: 10px;
-  width: auto;
-  transition: background-color 0.3s; /* Smooth transition for the hover effect */
+  display: inline-block; /* Makes the link behave like a button */
+  background-color: #ffffff; /* Button background color */
+  color: #000000; /* Text color, change as needed */
+  border: 1px solid #dddddd; /* Button border */
+  border-radius: 4px; /* Rounded corners for the button */
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 1rem; /* Text size */
+  text-decoration: none; /* Removes underline from links */
+  text-align: center; /* Centers the text inside the button */
+  cursor: pointer; /* Shows a pointer cursor on hover */
+  margin-bottom: 10px; /* Space below the button */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  margin-left: 5%;
 }
 
 .option-button:hover {
-  background-color: #ccc; /* A darker shade for the hover state */
+  background-color: #ffd2d2; /* Darker shade on hover */
+  color: #ffffff; /* Change text color on hover if needed */
 }
+
+.logo-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100%;        
+}
+
 
 /* Styles for screens larger than 768px */
 @media (min-width: 768px) {
