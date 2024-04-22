@@ -6,27 +6,26 @@ body, h1, h2, p {
   background-color: #fce9e9;
 }
 
-/* Default (Mobile) styles, with centered content */
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers vertically */
-  align-items: center; /* Centers horizontally */
+  justify-content: center; 
+  align-items: center; 
   text-align: center;
-  min-height: 100vh; /* Full viewport height */
+  min-height: 100vh; 
   font-family: Arial, sans-serif;
   padding: 20px;
 }
 
 .logo {
-  width: 100%; /* Mobile logo size, adjust as needed */
+  width: 100%;
   height: auto;
   margin-bottom: 1rem;
-  margin: 0 auto; /* This centers the image block inside .logo-section */
+  margin: 0 auto; 
 }
 
 h1, h2 {
-  color: #d12317; /* This should be the color of your logo */
+  color: #d12317; 
   
 }
 
@@ -34,24 +33,24 @@ h2 {
   margin-bottom: 1rem;
 }
 .option-button {
-  display: inline-block; /* Makes the link behave like a button */
-  background-color: #ffffff; /* Button background color */
-  color: #000000; /* Text color, change as needed */
-  border: 1px solid #dddddd; /* Button border */
-  border-radius: 4px; /* Rounded corners for the button */
-  padding: 10px 20px; /* Padding inside the button */
-  font-size: 1rem; /* Text size */
-  text-decoration: none; /* Removes underline from links */
-  text-align: center; /* Centers the text inside the button */
-  cursor: pointer; /* Shows a pointer cursor on hover */
-  margin-bottom: 10px; /* Space below the button */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  display: inline-block; 
+  background-color: #ffffff; 
+  color: #000000; 
+  border: 1px solid #dddddd; 
+  border-radius: 4px; 
+  padding: 10px 20px; 
+  font-size: 1rem; 
+  text-decoration: none; 
+  text-align: center; 
+  cursor: pointer; 
+  margin-bottom: 10px; 
+  transition: background-color 0.3s, color 0.3s; 
   margin-left: 5%;
 }
 
 .option-button:hover {
-  background-color: #ffd2d2; /* Darker shade on hover */
-  color: #ffffff; /* Change text color on hover if needed */
+  background-color: #ffd2d2;
+  color: #ffffff; 
 }
 
 .logo-container {
@@ -62,7 +61,7 @@ h2 {
 }
 
 
-/* Styles for screens larger than 768px */
+
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
@@ -70,12 +69,12 @@ h2 {
   }
 
   .logo {
-    width: 100%; /* Adjust based on actual size */
-    max-width: 300px; /* Adjust to the size of your desktop logo */
+    width: 100%; 
+    max-width: 300px;
   }
 
   .option-button {
-    width: 200px; /* Fixed width for buttons on desktop */
+    width: 200px; 
     padding: 10px 20px;
   }
 }
