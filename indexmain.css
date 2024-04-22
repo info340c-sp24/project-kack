@@ -1,19 +1,14 @@
-
-        .main{
-            width: 100%;
-            background: 
-                linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
-                url(images/1.jpeg);
-            background-position: center;
-            background-size: cover;
-            height: 100vh;
-            flex-grow: 1;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+.main {
+    flex-grow: 1;
+    background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(images/1.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
         .navbar a{
             color: white;
         }
@@ -85,7 +80,7 @@
         .foodbank-list-section {
             display: flex;
             flex-direction: column;
-            width: 90%;
+            width: 100%;
             align-items: flex-start; /* Aligns title to the left */
             background-color: #C55C78; /* Use your desired background color */
             color: white;
@@ -162,7 +157,6 @@
             background-color: #666;
         }
         .footer{
-            margin-top: 1205px;
             font-size: x-small;
             text-align: center;
         }
@@ -254,11 +248,11 @@
             .btn-details {
                 margin-left: 20px; /* Space before the button */
             }  
-            .footer{
-                margin-top: 705px;
+            .footer {
+                margin-top: auto;
                 font-size: x-small;
                 text-align: center;
-            } 
+            }
             
         }
 
