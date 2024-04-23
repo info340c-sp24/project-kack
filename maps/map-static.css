@@ -1,16 +1,15 @@
-
 body,
 html {
   margin: 0;
   padding: 0;
   max-width: 100%; 
-  height: 100%; 
+  height: 100%; /* Use 100% instead of 100vh to avoid issues with mobile browsers' address bars */
 }
 
 body {
   background-image: url("../images/mobile-map.png");
   background-size: cover;
-  background-position: center center; 
+  background-position: center center; /* Center the background on mobile */
 }
 
 .navbar {
@@ -23,12 +22,12 @@ body {
 
 .popup-container {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: flex-start; 
-  padding-top: 60px; 
-  width: 100vw; 
-  box-sizing: border-box; 
+  flex-direction: column; /* Stack vertically on mobile */
+  align-items: center; /* Center items horizontally */
+  justify-content: flex-start; /* Start at the top of the screen */
+  padding-top: 60px; /* Adjust for the header, if present */
+  width: 100vw; /* Use the full width of the viewport */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .popup {
@@ -36,10 +35,10 @@ body {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  width: 90%; 
-  margin: 0 5%; 
-  overflow-y: auto; 
-  max-height: 75vh; 
+  width: 90%; /* Set popup width to 90% of the container width */
+  margin: 0 5%; /* Center the popup with equal margins on both sides */
+  overflow-y: auto; /* Enable scrolling for overflow content */
+  max-height: 75vh; /* Set a max-height for the popup content */
 }
 
 .popup-container .material-symbols-outlined {
@@ -47,17 +46,17 @@ body {
 }
 
 .fb-image {
-  width: 100%; 
-  height: auto; 
-  border-radius: 10px; 
+  width: 100%; /* Ensure the image is responsive and fits within the popup */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Match popup border radius */
 }
 
 .requests {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem; 
-  padding-bottom: 10px; 
+  font-size: 1rem; /* Adjust font size for mobile */
+  padding-bottom: 10px; /* Adjust padding for mobile */
   border-bottom: 1px solid black;
   font-weight: bold;
 }
@@ -68,17 +67,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0; 
+  padding: 10px 0; /* Adjust padding for mobile */
 }
 
 .donate-button {
-  padding: 10px 20px; 
-  background-color: transparent; 
-  border: 1px solid black; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-  font-weight: bold; 
+  padding: 10px 20px; /* Add padding inside the button */
+  background-color: transparent; /* Example button color - use your preferred color */
+  border: 1px solid black; /* Remove default border */
+  border-radius: 5px; /* Optional: rounded corners for the button */
+  cursor: pointer; /* Change cursor to pointer when hovering over the button */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: add shadow for button */
+  font-weight: bold; /* Optional: make button text bold */
+  /* Adjust margins and size as needed */
 }
 .canned-proteins {
   padding-top: 10px;
@@ -86,7 +86,7 @@ body {
   font-weight: bold;
 }
 
-
+/* Media query for larger screens such as tablets and desktops */
 @media (min-width: 768px) {
   body {
     background-image: url("../images/map-ss.png");
@@ -108,42 +108,42 @@ body {
 
   .navbar a {
     text-decoration: none;
-    color: black; 
-    padding: 5px 8px; 
+    color: black; /* word color */
+    padding: 5px 8px; /* padding */
     transition: color 0.3s;
     font-weight: bold;
     font-size: 1.1em;
   }
-
+  /* Adjust the layout for larger screens */
   .popup-container {
-    flex-direction: row; 
-    align-items: flex-start; 
-    justify-content: center; 
-    padding-top: 60px; 
+    flex-direction: row; /* Align items horizontally for wider screens */
+    align-items: flex-start; /* Align items to the top of the container */
+    justify-content: center; /* Center items horizontally */
+    padding-top: 60px; /* Maintain padding for the header */
     width: 100vw;
   }
 
   .popup {
-    width: 400px; 
-    margin: 20px; 
+    width: 400px; /* Fixed width for popup on larger screens */
+    margin: 20px; /* Adjust margins as needed */
   }
 
   .popup-container .material-symbols-outlined {
     display: inline;
-    font-size: 40px; 
-    margin-top: 300px; 
-    margin-left: 10px; 
+    font-size: 40px; /* Larger icon size for larger screens */
+    margin-top: 300px; /* Reset top margin for icon */
+    margin-left: 10px; /* Add some space between the popup and the icon */
   }
 
   .fb-image {
-    width: 400px; 
+    width: 400px; /* Fixed width for image on larger screens */
   }
 
-
+  /* Add other styles specific to larger screens as needed */
 }
 footer {
-  background-color: rgba(255, 255, 255, 0.7); 
-  padding: 18px 0; 
-  text-align: center; 
+  background-color: rgba(255, 255, 255, 0.7); /* white with 80% opacity */
+  padding: 18px 0; /* Add some vertical padding */
+  text-align: center; /* Center the text if desired */
   font-size: x-small;
 }
