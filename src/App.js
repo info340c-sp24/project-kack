@@ -2,6 +2,7 @@ import React from "react";
 // import Page from "./Page";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About_us from "./About_us";
+import Mainpage from "./Mainpage";
 import Dashboard from "./Dashboard";
 import Food_Request from "./Food_Request";
 import Forms from "./Forms";
@@ -21,6 +22,7 @@ const App = () => {
           {/* <Route path="/" element={<Page />} /> */}
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/About_us" element={<About_us />} />
+          <Route path="/Mainpage" element={<Mainpage />} />
           <Route path="/Food_Request" element={<Food_Request />} />
           <Route path="/forms" element={<Forms />} />
           <Route path="/Login" element={<Login />} />
