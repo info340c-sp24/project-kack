@@ -1,1 +1,474 @@
-
+.map-request {
+    font-weight: bold;
+    text-align: center;
+}
+.map-popup-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.map-food-type {
+    font-weight: bold;
+}
+.food-bank-image {
+    width: 100%;
+    height: auto;
+}
+/* This is the main page */
+.mainPage {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url(assets/1.jpeg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  .nourishing-hope {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    padding: 400px;
+    font-family: "Nunito Sans", Arial, sans-serif; 
+  }
+  
+  .nourishing-hope h1 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .nourishing-hope p {
+    color: white;
+    font-weight: 400;
+    font-size: 1em;
+  }
+  .read-more {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .read-more:hover {
+    background-color: rgb(252, 31, 94);
+    color: white;
+    border-color: white;
+  }
+  
+  .foodbank-list-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start; 
+    background-color: #c55c78; 
+    color: white;
+    padding: 5px;
+    text-align: left;
+  }
+  
+  .foodbank-list-section h2 {
+    font-size: 2rem; 
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-left: 20px; 
+  }
+  
+  .foodbank-list-section p {
+    font-size: 1rem; 
+    margin-bottom: 1.5rem;
+    margin-left: 20px;
+    
+  }
+  .foodbank-list-title {
+    font-size: 1rem; 
+    line-height: 1.3; 
+    text-align: center; 
+    padding: 0 15px; 
+    word-wrap: break-word; 
+  }
+  .foodbank-list-subtitle {
+    font-size: 0.6rem; 
+    text-align: left; 
+    padding: 0 15px; 
+    margin-top: 10px; 
+  }
+  
+  .foodbank-cards-container {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    gap: 20px;
+    padding: 0 20px;
+    margin: 0 auto; 
+    max-width: 900px; 
+  }
+  .foodbank-card {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem; 
+  }
+  
+  .foodbank-card-content {
+    flex-grow: 1; 
+  }
+  
+  .btn-details {
+    padding: 10px 15px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: 20px;
+    flex-shrink: 0;
+  }
+  
+  .btn-details:hover {
+    background-color: #666;
+  }
+  @media (min-width: 768px) {
+    .flex-container {
+      flex-direction: row; 
+      justify-content: space-between; 
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: transparent;
+      color: white;
+  
+      width: 40%;
+      top: 0;
+      z-index: 100;
+    }
+  
+    .navbar a {
+      text-decoration: none;
+      color: white; 
+      padding: 5px 8px; 
+      transition: color 0.3s;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+  
+    .nourishing-hope {
+      width: 50%; 
+      padding: 40px;
+      align-items: flex-start;
+    }
+    .foodbank-list-section {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      align-items: flex-start; 
+      background-color: #c55c78; 
+      color: white;
+      padding: 10px;
+      text-align: left;
+    }
+    .foodbank-list-section h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem; 
+    }
+  
+    .foodbank-list-section p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+     
+    }
+  
+    .foodbank-list-title {
+      font-size: 2rem; 
+      padding: 0; 
+      text-align: left; 
+    }
+  
+    .foodbank-list-subtitle {
+      font-size: 1rem; 
+      margin-bottom: 10px; 
+      padding: 0; 
+      text-align: left; 
+    }
+  
+    .foodbank-cards-container {
+      justify-content: flex-start; 
+      padding: 0 20px;
+      max-width: 1200px;
+      margin: 0 auto; 
+    }
+  
+    .foodbank-card {
+      width: 100%; 
+      margin: 10px 0; 
+    }
+  
+    .btn-details {
+      margin-left: 20px; 
+    }
+    .footer {
+      margin-top: auto;
+      font-size: x-small;
+      text-align: center;
+    }
+  }
+  .navbar a{
+      color: white;
+      }
+      .icon{
+      width: 200px;
+      height: 70px;
+  }
+  
+  .flex-container {
+      display: flex;
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh;
+      position: relative;
+  }
+  
+  .nourishing-hope {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; 
+      width: 50%; 
+      padding: 400px;
+      font-family: 'Nunito Sans', Arial, sans-serif; 
+  }
+  
+  .nourishing-hope h1 {
+      color: white;
+      font-weight: 700;
+      margin-bottom: 20px; 
+  }
+  
+  .nourishing-hope p {
+      color: white; 
+      font-weight: 400;
+      font-size: 1em;
+  }
+  .read-more {
+      padding: 10px 20px; 
+      background-color: transparent; 
+      color: white; 
+      border: 3px solid white;
+      border-radius: 30px; 
+      cursor: pointer; 
+      transition: all 0.3s ease; 
+      font-family: 'Nunito Sans', Arial, sans-serif; 
+      font-size: 16px; 
+      font-weight: 700; 
+      text-transform: uppercase;
+      margin-top: 20px;
+      letter-spacing: 1px;
+      outline: none; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .read-more:hover {
+      background-color: rgb(252, 31, 94); 
+      color: white; 
+      border-color: white; 
+  }
+  .foodbank-list-section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start; 
+      background-color: #C55C78;
+      color: white;
+      padding: 5px;
+      text-align: left;
+  }
+  
+  .foodbank-list-section h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      margin-left: 20px; 
+  }
+  
+  .foodbank-list-section p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      margin-left: 20px;
+     
+  }
+  .foodbank-list-title {
+      font-size: 1rem;
+      line-height: 1.3; 
+      text-align: center; 
+      padding: 0 15px;
+      word-wrap: break-word; 
+  }
+  .foodbank-list-subtitle {
+      font-size: 0.6rem; 
+      text-align: left; 
+      padding: 0 15px;
+      margin-top: 10px;
+  }
+  
+  .foodbank-cards-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; 
+      justify-content: flex-start;
+      gap: 20px; 
+      padding: 0 20px;
+      margin: 0 auto; 
+      max-width: 900px; 
+  }
+  .foodbank-card {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      background-color: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1rem; 
+  }
+  
+  .foodbank-card-content {
+      flex-grow: 1;
+  }
+  
+  .btn-details {
+      padding: 10px 15px;
+      background-color: #444;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      margin-left: 20px;
+      flex-shrink: 0; 
+  }
+  
+  .btn-details:hover {
+      background-color: #666;
+  }
+  .footer{
+      font-size: x-small;
+      text-align: center;
+  }
+  
+  
+  @media (min-width: 768px) {
+      .flex-container {
+          flex-direction: row; 
+          justify-content: space-between; 
+      }
+      .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          background: transparent;
+          color: white;
+  
+          width: 89%;
+          top: 0;
+          z-index: 100;
+      }
+  
+      .navbar a {
+          text-decoration: none;
+          color: white; 
+          padding: 5px 8px; 
+          transition: color 0.3s;
+          font-weight: bold; 
+          font-size: 1.1em;
+      }
+  
+      .nourishing-hope {
+          width: 50%; 
+          padding: 40px;
+          align-items: flex-start; 
+      }
+      .foodbank-list-section {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          align-items: flex-start; 
+          background-color: #C55C78; 
+          color: white;
+          padding: 10px;
+          text-align: left;
+      }
+      .foodbank-list-section h2 {
+          font-size: 2rem; 
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+      }
+  
+      .foodbank-list-section p {
+          font-size: 1rem; 
+          margin-bottom: 1.5rem;
+          
+      }
+  
+  
+      .foodbank-list-title {
+          font-size: 2rem; 
+          padding: 0;
+          text-align: left; 
+      }
+  
+      .foodbank-list-subtitle {
+          font-size: 1rem;
+          margin-bottom: 10px; 
+          padding: 0; 
+          text-align: left; 
+      }
+  
+      .foodbank-cards-container {
+          justify-content: flex-start; 
+          padding: 0 20px; 
+          max-width: 1200px; 
+          margin: 0 auto; 
+      }
+  
+      .foodbank-card {
+          width: 100%; 
+          margin: 10px 0; 
+      }
+  
+      .btn-details {
+          margin-left: 20px; 
+      }  
+      .footer {
+          margin-top: auto;
+          font-size: x-small;
+          text-align: center;
+      }
+  
+      }
+/* ------- */
+  
+  
