@@ -1,1 +1,15 @@
-
+.map-request {
+    font-weight: bold;
+    text-align: center;
+}
+.map-popup-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.map-food-type {
+    font-weight: bold;
+}
+.food-bank-image {
+    width: 100%;
+    height: auto;
+}
