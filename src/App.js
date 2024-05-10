@@ -12,6 +12,7 @@ import Table from "./Table";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
+import FormComponent from "./Forms";
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/About_us" element={<About_us />} />
           <Route path="/Food_Request" element={<Food_Request />} />
-          <Route path="/forms" element={<Forms />} />
+          <Route path="/forms" element={<FormComponent />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/map" element={<MapComponent />} />
