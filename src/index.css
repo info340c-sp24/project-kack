@@ -618,5 +618,123 @@ footer {
     display: none;
   } */
 }
+/* about us page */
+.ab_main {
+  height: 100%;
+  padding-top: 100px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(assets/1.jpeg);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  flex: 1;
+  color: white;
+}
+
+.body {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white; 
+  background-color: #000;
+  display: flex;
+}
+.navbar {
+  display: none;
+}
+
+.ab_container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px; 
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  );
+  border-radius: 8px; 
+}
+
+.ab_heading {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px; 
+}
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.aboutus-page {
+  padding: 20px 0;
+}
+.aboutus-page h3,
+.team-member h3 {
+  color: #c55c78; 
+}
+.aboutus-page p {
+  line-height: 1.6;
+  margin-bottom: 15px; 
+  text-align: justify; 
+}
+
+.team-member {
+  flex-basis: calc(33.333% - 60px);
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  margin: 0;
+  color: white;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+}
+footer {
+  text-align: center;
+  margin-top: auto;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    height: 85vh;
+  }
+  .team-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .team-member {
+    width: calc(50% - 40px);
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .team-photo {
+    width: 100%; 
+    max-width: 150px; 
+  }
+  footer {
+    text-align: center;
+    margin-top: 0rem;
+    font-size: x-small;
+  }
+
+  .navbar {
+    display: block;
+  }
+}
+
   
   
