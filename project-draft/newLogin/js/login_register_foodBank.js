@@ -37,23 +37,23 @@ let up_Email = document.querySelector(".up_Email");
 let up_pwd = document.querySelector(".up_pwd");
 sub_singUp.onclick = function () {
   if (up_userName.value == "") {
-    return alert("请输入账号");
+    return alert("Please enter your account number");
   }
   if (up_Email.value == "") {
-    return alert("请输入邮箱");
+    return alert("Please enter email");
   }
   if (up_pwd.value == "") {
-    return alert("请输入密码");
+    return alert("Please enter password");
   }
   if (up_userName.value.length < 3) {
-    return alert("账号不可小于3位");
+    return alert("The account number cannot be less than 3 digits");
   }
   var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   if (!emailRegex.test(up_Email.value)) {
-    return alert("邮箱格式不正确");
+    return alert("The mailbox format is incorrect");
   }
   if (up_pwd.value.length < 6) {
-    return alert("密码长度不可小于6位");
+    return alert("The password must contain at least 6 characters");
   }
   let foodUser = JSON.parse(localStorage.getItem("foodUser"));
   if (foodUser == null) {
@@ -67,13 +67,13 @@ sub_singUp.onclick = function () {
     up_userName.value = "";
     up_Email.value = "";
     up_pwd.value = "";
-    return alert("注册成功，请去登录");
+    return alert("Registration success, please go to login");
   } else {
     let registerState = true;
     for (let i = 0; i < foodUser.user.length; i++) {
       if (foodUser.user[i] == up_userName.value) {
         registerState = false;
-        return alert("该账号已注册");
+        return alert("The account has been registered");
       }
     }
     if (registerState) {
@@ -82,7 +82,7 @@ sub_singUp.onclick = function () {
       up_userName.value = "";
       up_Email.value = "";
       up_pwd.value = "";
-      return alert("注册成功，请去登录");
+      return alert("Registration success, please go to login");
     }
   }
 };
