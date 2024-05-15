@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'; 
-
+import Footer from "./Footer.js";
 function PageFlex(props){
   return(
     <main className="mainPage" aria-labelledby="main-heading">
@@ -47,6 +47,7 @@ function FoodContainers({ foodBanks }) {
         ))}
       </div>
     </div>
+
   );
 }
 function Mainpage() {
@@ -72,6 +73,7 @@ function Mainpage() {
   ];
 
   return (
+    <>
     <div>
       <PageFlex 
         title="NOURISHING HOPE TOGETHER"
@@ -80,7 +82,10 @@ function Mainpage() {
       />
       <FoodContainers foodBanks={foodBanks} />
     </div>
+    <Footer />
+    </>
   );
+  
 }
 
 export default Mainpage;
