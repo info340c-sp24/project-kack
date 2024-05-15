@@ -2,14 +2,14 @@ import React from "react";
 
 export function DonarRow({ donarData }) {
   return (
-    <tr>
-      <td>{donarData.donarName}</td>
-      <td>{donarData.location}</td>
-      <td>{donarData.date}</td>
-      <td>{donarData.phoneNumber}</td>
-      <td>{donarData.foodType}</td>
-      <td>{donarData.specificFood}</td>
-      <td>{donarData.status}</td>
+    <tr className="table-rows">
+      <td>{donarData.DonarName}</td>
+      <td>{donarData.Location}</td>
+      <td>{donarData.Date}</td>
+      <td>{donarData.PhoneNumber}</td>
+      <td>{donarData.TypeofFood}</td>
+      <td>{donarData.SpecificFood}</td>
+      <td>{donarData.Status}</td>
     </tr>
   );
 }

@@ -6,8 +6,8 @@ import { DonarTable } from "./DonarTable";
 
 const Table = () => {
   return (
-    <div className="container">
-      <h1>Donar</h1>
+    <div className="table-container">
+      <h1 className="donar-title">Donar</h1>
       <Sidebar />
       <DonarTable donarsList={donars} />
       <Footer />

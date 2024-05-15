@@ -829,3 +829,50 @@ footer {
     border-radius: 100px;
   }
 }
+
+/* This is the CSS for the Table Page */
+
+table-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th {
+  height: 2rem;
+  text-align: left;
+  background-color: #f2c5c5;
+}
+
+th,
+td {
+  padding: 1em;
+  border-bottom: 1px solid #d3d3d3;
+  color: white;
+}
+
+tbody > tr:nth-child(even) {
+  background-color: #ce8e9a;
+  font-size: 0.8em;
+}
+tbody > tr:nth-child(odd) {
+  background-color: #c55c78;
+  font-size: 0.8em;
+}
+
+tbody > tr:hover {
+  background-color: #8d0a0a;
+}
+
+@media (min-width: 768px) {
+  table-container {
+    flex-direction: row;
+  }
+}
