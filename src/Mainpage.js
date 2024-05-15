@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from 'react-router-dom'; 
 import Footer from "./Footer.js";
+import Navbar from "./Navbar.js";
 function PageFlex(props){
   return(
+    <>
+    <header>
+      <Navbar />
+    </header>
     <main className="mainPage" aria-labelledby="main-heading">
     <section className="flex-container">
         <article className="nourishing-hope">
@@ -19,6 +24,7 @@ function PageFlex(props){
         </article>
       </section>
       </main>
+      </>
   );
 }
 

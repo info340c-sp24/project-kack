@@ -44,9 +44,6 @@ footer {
   color: white;
 }
 
-.navbar {
-  display: none;
-}
 
 .donation-container {
   width: 80%;
@@ -144,7 +141,7 @@ footer {
   justify-content: center;
   align-items: flex-start;
   width: 50%;
-  padding: 400px;
+  /* padding: 400px; */
   font-family: "Nunito Sans", Arial, sans-serif;
 }
 
@@ -266,27 +263,6 @@ footer {
     flex-direction: row;
     justify-content: space-between;
   }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: transparent;
-    color: white;
-
-    width: 40%;
-    top: 0;
-    z-index: 100;
-  }
-
-  .navbar a {
-    text-decoration: none;
-    color: white;
-    padding: 5px 8px;
-    transition: color 0.3s;
-    font-weight: bold;
-    font-size: 1.1em;
-  }
 
   .nourishing-hope {
     width: 50%;
@@ -348,9 +324,6 @@ footer {
     text-align: center;
   }
 }
-.navbar a {
-  color: white;
-}
 .icon {
   width: 200px;
   height: 70px;
@@ -371,7 +344,7 @@ footer {
   justify-content: center;
   align-items: flex-start;
   width: 50%;
-  padding: 400px;
+  /* padding: 400px; */
   font-family: "Nunito Sans", Arial, sans-serif;
 }
 
@@ -508,34 +481,13 @@ footer {
     flex-direction: row;
     justify-content: space-between;
   }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: transparent;
-    color: white;
-
-    width: 89%;
-    top: 0;
-    z-index: 100;
-  }
-
-  .navbar a {
-    text-decoration: none;
-    color: white;
-    padding: 5px 8px;
-    transition: color 0.3s;
-    font-weight: bold;
-    font-size: 1.1em;
-  }
-
   .nourishing-hope {
     width: 50%;
     padding: 40px;
     align-items: flex-start;
   }
   .foodbank-list-section {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -643,9 +595,6 @@ footer {
   background-color: #000;
   display: flex;
 }
-.navbar {
-  display: none;
-}
 
 .ab_container {
   max-width: 1000px;
@@ -730,9 +679,6 @@ footer {
     font-size: x-small;
   }
 
-  .navbar {
-    display: block;
-  }
 }
 
 /* This is the login page1 */
@@ -827,5 +773,25 @@ footer {
     margin-left: 5%;
     font-weight: bold;
     border-radius: 100px;
+  }
+}
+/* Navbar */
+@media (min-width: 768px) {
+
+  .navbar {
+    text-decoration: none;
+    color: white;
+    background-color: white;
+    width: 90%;
+  }
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    align-items: center;
+  }
+  .nav-item li{
+    text-decoration: none;
   }
 }
