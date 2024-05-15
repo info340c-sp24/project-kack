@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="footer">
       <p>
         &copy; 2024 KACK | Kevin Tat, Keaton Staggs, Anthony Wen, Haiyi Luo
         (Cecilia)
