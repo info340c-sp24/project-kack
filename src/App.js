@@ -20,17 +20,17 @@ const App = () => {
       <div>
         <Routes>
           <Route path="/" element={<Mainpage />} />
-          <Route path="/Dashboard" element={<Dashboard />} />
-          <Route path="/About" element={<About_us />} />
-          <Route path="/Food_Request" element={<Food_Request />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/about" element={<About_us />} />
+          <Route path="/request" element={<Food_Request />} />
           <Route path="/form" element={<FormComponent />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/map" element={<MapComponent />} />
-          <Route path="/Table" element={<Table />} />
-          <Route path="/Navbar" element={<Navbar />} />
-          <Route path="/Sidebar" element={<Sidebar />} />
-          <Route path="/Footer" element={<Footer />} />
+          <Route path="/table" element={<Table />} />
+          <Route path="/navbar" element={<Navbar />} />
+          <Route path="/sidebar" element={<Sidebar />} />
+          <Route path="/footer" element={<Footer />} />
         </Routes>
       </div>
     </Router>

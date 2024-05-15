@@ -1,5 +1,5 @@
 import React from "react";
-
+import Footer from "./Footer.js";
 function About_us (props) {
   return (
     <main className="ab_main">
@@ -46,8 +46,11 @@ function About_us (props) {
           </p>
         </section>
         <section className="team"></section>
+        
       </section>
+      <Footer />
     </main>
+    
   )
 };
 
