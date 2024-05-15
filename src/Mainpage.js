@@ -8,7 +8,7 @@ function PageFlex(props){
         <article className="nourishing-hope">
           <h1>NOURISHING HOPE TOGETHER</h1>
           <p>From Compassion to Action - Together, We Nourish Hope</p>
-          <a href="about_us/about_us.html">
+          <a href="/about">
             <button
               className="read-more"
               aria-label="Read more about Nourishing Hope"
