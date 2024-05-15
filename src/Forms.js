@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from './Footer.js';
 
 const FormComponent = () => {
   const [name, setName] = useState("");
@@ -67,6 +68,7 @@ const FormComponent = () => {
     </form>
   </section>
 </main>
+<Footer />
 </body>
   );
 };
