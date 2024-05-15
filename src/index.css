@@ -775,23 +775,3 @@ footer {
     border-radius: 100px;
   }
 }
-/* Navbar */
-@media (min-width: 768px) {
-
-  .navbar {
-    text-decoration: none;
-    color: white;
-    background-color: white;
-    width: 90%;
-  }
-  .navbar-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 20px;
-    align-items: center;
-  }
-  .nav-item li{
-    text-decoration: none;
-  }
-}
