@@ -1,15 +1,13 @@
 import React from "react";
 
-const TableHeader = ({ columnNames }) => {
+export function TableHeader({ columnNames }) {
   return (
     <thead>
       <tr>
-        {columnNames.map((name) => (
-          <th key={name}>{name}</th>
+        {columnNames.map((columnName, index) => (
+          <th key={index}>{columnName}</th>
         ))}
       </tr>
     </thead>
   );
-};
-
-export default TableHeader;
+}
