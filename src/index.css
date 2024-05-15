@@ -728,14 +728,15 @@ footer {
   }
 }
 
-/* This is the login page */
+/* This is the login page1 */
+
 /* General styles to reset */
-.kackLoginReset * {
+/* .kackLoginReset * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   background-color: #fce9e9;
-}
+} */
 
 .kackLoginBody,
 .kackLoginH1,
