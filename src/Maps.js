@@ -151,6 +151,8 @@ const MapComponent = () => {
   return (
     
   <div style={{width: '100%', height: '100vh'}}>
+    <Navbar />
+    <MobileNavbar />
   <div id="map" style={{width: '100%', height: '95vh'}} />
 
   <Footer />

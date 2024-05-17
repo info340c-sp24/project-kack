@@ -30,11 +30,13 @@ footer {
   width: 100%;
   height: auto;
 }
+
 /* This is the donation form page */
 
 .donation-main {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(assets/1.jpeg);
+    background-size: cover;
   font-family: "Nunito Sans", sans-serif;
   margin: 0;
   padding: 0;
@@ -466,12 +468,12 @@ footer {
 }
 /* navbar mobile */
 /* Hide mobile navbar by default */
+@media (max-width: 768px) {
 .navbar.mobile {
   display: none;
 }
-
+}
 /* When screen width is 768px or less */
-@media (max-width: 768px) {
   /* Hide desktop navbar */
   .navbar.desktop {
     display: none;
@@ -524,7 +526,8 @@ footer {
   
   
   
-}
+  
+
 
 @media (min-width: 768px) {
   .mainPage {
