@@ -791,8 +791,19 @@ footer {
     padding: 0 20px;
     align-items: center;
   }
-  .nav-item li{
+  .nav-item a{
     text-decoration: none;
+    color:#000;
+    font-weight: bold;
+  }
+  .nav-logo {
+    width: 100%;
+    max-width: 40px;
+  
+  }
+  .nav-item a:hover {
+    color: #c55c78;
+    text-decoration: underline;
   }
 }
 
