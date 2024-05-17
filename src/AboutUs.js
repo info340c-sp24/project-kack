@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "./Footer.js";
-function About_us (props) {
+function AboutUs(props) {
   return (
     <main className="ab_main">
       <section className="ab_container">
@@ -46,12 +46,10 @@ function About_us (props) {
           </p>
         </section>
         <section className="team"></section>
-        
       </section>
       <Footer />
     </main>
-    
-  )
-};
+  );
+}
 
-export default About_us;
+export default AboutUs;

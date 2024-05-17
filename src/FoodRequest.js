@@ -1,7 +1,7 @@
 import React from "react";
 
-const Food_Request = () => {
+const FoodRequest = () => {
   return <div>Food_Request</div>;
 };
 
-export default Food_Request;
+export default FoodRequest;

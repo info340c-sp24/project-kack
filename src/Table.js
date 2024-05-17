@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "./Sidebar";
+import { Sidebar } from "./Sidebar";
 import Footer from "./Footer";
 import donars from "./data/donars.json";
 import { DonarTable } from "./DonarTable";

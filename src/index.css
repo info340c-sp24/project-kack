@@ -5,6 +5,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
 }
 
 footer {
@@ -14,6 +16,37 @@ footer {
   text-align: center;
 }
 
+@media (min-width: 769px) {
+  .sidebar {
+    height: 100%;
+    width: 15vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #c55c78;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.5s;
+  }
+
+  .sidebar a {
+    margin: 18px 0; /* Add margin for spacing between links */
+    font-size: 1.5em; /* Restoring larger font size for larger screens */
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+  }
+
+  .sidebar a:hover {
+    background-color: #8d0a0a; /* Light purple, for hover effect */
+  }
+
+  .logo {
+    margin-bottom: 20px; /* Space below logo */
+  }
+}
 /* this is the map page */
 .map-request {
   font-weight: bold;
@@ -43,7 +76,6 @@ footer {
   min-height: 100vh;
   color: white;
 }
-
 
 .donation-container {
   width: 80%;
@@ -678,7 +710,6 @@ footer {
     margin-top: 0rem;
     font-size: x-small;
   }
-
 }
 
 /* This is the login page1 */
@@ -777,7 +808,6 @@ footer {
 }
 /* Navbar */
 @media (min-width: 768px) {
-
   .navbar {
     text-decoration: none;
     color: white;
@@ -791,7 +821,7 @@ footer {
     padding: 0 20px;
     align-items: center;
   }
-  .nav-item li{
+  .nav-item li {
     text-decoration: none;
   }
 }
