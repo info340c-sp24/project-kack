@@ -1,31 +1,31 @@
 import React from "react";
+import logo from "./images/KACK_logo.png";
+import MobileSidebar from "./MobileSidebar";
 
 export function Sidebar() {
   return (
-    <div className="sidebar">
-      <a href="home.html" class="logo">
-        <img src="assets/Kack_icon.png" alt="KACK Logo" />
-      </a>
-      <div className="sidebar-links">
-        <a href="dashboard.html">Dashboard</a>
-        <a href="donors.html">Donors</a>
-        <a href="requests.html">Requests</a>
-      </div>
-    </div>
-  );
-}
+    <>
+      <div className="navbar desktop">
+        <ul className="navbar-nav">
+          <a href="/">
+            {" "}
+            <img src={logo} alt="KACK Logo" className="nav-logo" />{" "}
+          </a>
 
-export function HamSidebar() {
-  return (
-    <div className="ham-sidebar">
-      <a href="home.html" class="logo">
-        <img src="../images/Kack_icon.png" alt="KACK Logo" />
-      </a>
-      <div className="sidebar-links">
-        <a href="dashboard.html">Dashboard</a>
-        <a href="donors.html">Donors</a>
-        <a href="requests.html">Requests</a>
+          <li className="nav-item">
+            <a href="/Dashboard">Dashboard</a>
+          </li>
+          <li className="nav-item">
+            <a href="/Table">Donars</a>
+          </li>
+          <li className="nav-item">
+            <a href="/FoodRequest">Requests</a>
+          </li>
+        </ul>
       </div>
-    </div>
+      <div className="navbar mobile">
+        <MobileSidebar />
+      </div>
+    </>
   );
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "./Footer";
-import Navbar from "./Navbar";
+import { Sidebar } from "./Sidebar";
 
 const Dashboard = () => {
   return (
     <div>
-      <Navbar />
-      Dashboard
+      <Sidebar />
+      <h1>Dashboard</h1>
       <Footer />
     </div>
   );
