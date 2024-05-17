@@ -1,7 +1,14 @@
 import React from "react";
 import Footer from "./Footer.js";
+import Navbar from "./Navbar.js";
+import MobileNavbar from "./MobileNavbar.js";
 function About_us (props) {
   return (
+    <>
+    <header>
+    <Navbar />
+    <MobileNavbar />
+      </header>
     <main className="ab_main">
       <section className="ab_container">
         <h1 className="ab_heading">About Us</h1>
@@ -49,8 +56,9 @@ function About_us (props) {
         
       </section>
       <Footer />
+      
     </main>
-    
+    </>
   )
 };
 

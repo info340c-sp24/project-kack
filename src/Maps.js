@@ -6,6 +6,8 @@ import image from './images/uw-fb.jpg';
 import image2 from './images/frn-fb.webp';
 import image3 from './images/ud-fb.webp';
 import Footer from './Footer.js';
+import Navbar from "./Navbar.js";
+import MobileNavbar from "./MobileNavbar.js";
 
 
 const MapComponent = () => {
@@ -145,8 +147,12 @@ const MapComponent = () => {
       return () => map.remove();
   }
   , []);
-  return (<div style={{width: '100%', height: '100vh'}}>
+  
+  return (
+    
+  <div style={{width: '100%', height: '100vh'}}>
   <div id="map" style={{width: '100%', height: '95vh'}} />
+
   <Footer />
 </div>)
   

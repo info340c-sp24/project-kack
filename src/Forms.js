@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Footer from './Footer.js';
-
+import Navbar from "./Navbar.js";
+import MobileNavbar from "./MobileNavbar.js";
 const FormComponent = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -27,6 +28,11 @@ const FormComponent = () => {
   };
 
   return (
+<>
+    <header>
+    <Navbar />
+    <MobileNavbar />
+    </header>
     <body>
     <main className="donation-main">
   <section className="donation-container">
@@ -67,9 +73,11 @@ const FormComponent = () => {
       <input type="submit" value="Submit" />
     </form>
   </section>
+  
 </main>
 <Footer />
 </body>
+</>
   );
 };
 
