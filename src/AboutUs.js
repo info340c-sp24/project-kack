@@ -61,4 +61,4 @@ function AboutUs(props) {
   );
 }
 
-export default About_us;
+export default AboutUs;

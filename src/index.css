@@ -902,6 +902,7 @@ footer {
   }
 }
 
+
 /* This is the CSS for the Table Page */
 
 table-container {
@@ -948,3 +949,5 @@ tbody > tr:hover {
     flex-direction: row;
   }
 }
+}
+
