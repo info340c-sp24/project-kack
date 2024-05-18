@@ -111,7 +111,7 @@ export default function LoginDonors() {
               className="loginDonors_form__button loginDonors_button loginDonors_submit loginDonors_sub_singUp"
               onClick={handleSubmit}
             >
-              SIGN UP
+              SIGN IN
             </button>
           </form>
         </div>
