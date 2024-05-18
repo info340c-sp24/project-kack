@@ -1,16 +1,16 @@
 import React from "react";
 import { useEffect } from "react";
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import image from './images/uw-fb.jpg';
-import image2 from './images/frn-fb.webp';
-import image3 from './images/ud-fb.webp';
-import Footer from './Footer.js';
-
+import mapboxgl from "mapbox-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
+import image from "./assets/uw-fb.jpg";
+import image2 from "./assets/frn-fb.webp";
+import image3 from "./assets/ud-fb.webp";
+import Footer from "./Footer.js";
 
 const MapComponent = () => {
   useEffect(() => {
-    mapboxgl.accessToken = "pk.eyJ1IjoiZmdvbnphMiIsImEiOiJjbG9vdWFjcHIwMG5kMmpvMXN5aWkwZXc4In0.GWMxQgk8OVnVI8DwIGcw_w";
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoiZmdvbnphMiIsImEiOiJjbG9vdWFjcHIwMG5kMmpvMXN5aWkwZXc4In0.GWMxQgk8OVnVI8DwIGcw_w";
 
     const map = new mapboxgl.Map({
       container: "map",
@@ -55,8 +55,7 @@ const MapComponent = () => {
               <li>Corn</li> \
               <li>Tomato</li> \
               </ul> \
-            </div>`
-          )
+            </div>`)
       )
       .addTo(map);
 
@@ -96,8 +95,7 @@ const MapComponent = () => {
               <li>Corn</li> \
               <li>Tomato</li> \
               </ul> \
-            </div>`
-        )
+            </div>`)
       )
       .addTo(map);
 
@@ -137,26 +135,20 @@ const MapComponent = () => {
               <li>Corn</li> \
               <li>Tomato</li> \
               </ul> \
-            </div>`
-        )
+            </div>`)
       )
       .addTo(map);
 
-      return () => map.remove();
-  }
-  , []);
-  
-  return (
-    
-  <div style={{width: '100%', height: '100vh'}}>
-  <div id="map" style={{width: '100%', height: '95vh'}} />
+    return () => map.remove();
+  }, []);
 
-  <Footer />
-</div>)
-  
+  return (
+    <div style={{ width: "100%", height: "100vh" }}>
+      <div id="map" style={{ width: "100%", height: "95vh" }} />
+
+      <Footer />
+    </div>
+  );
 };
 
 export default MapComponent;
-
-
-

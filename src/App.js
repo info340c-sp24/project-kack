@@ -5,6 +5,8 @@ import Mainpage from "./Mainpage";
 import Dashboard from "./Dashboard";
 import FoodRequest from "./FoodRequest";
 import Login from "./Login";
+import LoginFoodBank from "./LoginFoodBank";
+import LoginDonors from "./LoginDonors";
 import Register from "./Register";
 import MapComponent from "./Maps";
 import Table from "./Table";
@@ -22,6 +24,8 @@ const App = () => {
           <Route path="/FoodRequest" element={<FoodRequest />} />
           <Route path="/form" element={<FormComponent />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/LoginFoodBank" element={<LoginFoodBank />} />
+          <Route path="/LoginDonors" element={<LoginDonors />} />
           <Route path="/register" element={<Register />} />
           <Route path="/map" element={<MapComponent />} />
           <Route path="/table" element={<Table />} />

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./images/KACK_logo.png";
+import logo from "./assets/KACK_logo.png";
 import MobileSidebar from "./MobileSidebar";
 
 export function Sidebar() {

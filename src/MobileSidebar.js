@@ -1,6 +1,6 @@
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
-import logo from "./images/KACK_logo.png";
+import logo from "./assets/KACK_logo.png";
 
 const MobileSidebar = () => {
   return (

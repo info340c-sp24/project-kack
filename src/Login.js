@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import logo from "./images/KACK_logo.png";
+import logo from "./assets/KACK_logo.png";
 
 function Login() {
   return (
@@ -14,10 +14,10 @@ function Login() {
           <h2 className="kackLoginH2">
             Choose your identity to login/Register:
           </h2>
-          <a href="login_foodbank.html" className="kackLoginOptionButton">
+          <a href="/LoginFoodBank" className="kackLoginOptionButton">
             FOOD BANK
           </a>
-          <a href="login_donors.html" className="kackLoginOptionButton">
+          <a href="/LoginDonors" className="kackLoginOptionButton">
             DONOR
           </a>
         </div>
