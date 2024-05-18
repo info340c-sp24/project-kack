@@ -1,12 +1,10 @@
 import React from "react";
 import Footer from "./Footer.js";
-import Navbar from "./Navbar.js";
 import MobileNavbar from "./MobileNavbar.js";
 function AboutUs(props) {
   return (
     <>
       <header>
-        <Navbar />
         <MobileNavbar />
       </header>
       <main className="ab_main">

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "university-district-food-bank",
+    "name": "University District Food Bank",
+    "description": "Serving the community since 1998, the University District Food Bank provides essential food assistance to individuals and families in need, fostering a thriving community.",
+    "link": "https://www.udistrictfoodbank.org/"
+  },
+  {
+    "id": "Food-Resource-Network",
+    "name": "Food Resource Network",
+    "description": "Providing a lifeline to those in need, the Food Resource Network offers vital food support services, promoting health and wellness in the community.",
+    "link": "https://familyworksseattle.org/"
+  },
+  {
+    "id": "UW-Food-Pantry",
+    "name": "UW Food Pantry",
+    "description": "UW Food Pantry provides essential food assistance and community support, promoting health and unity in the U-District area.",
+    "link": "https://www.washington.edu/anyhungryhusky/the-uw-food-pantry/"
+  }
+]

@@ -143,9 +143,16 @@ const MapComponent = () => {
   }, []);
 
   return (
-    <div style={{ width: "100%", height: "100vh" }}>
+    <div
+      style={{
+        width: "100%",
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        zIndex: 0,
+      }}
+    >
       <div id="map" style={{ width: "100%", height: "95vh" }} />
-
       <Footer />
     </div>
   );

@@ -5,7 +5,7 @@ import MobileSidebar from "./MobileSidebar";
 export function Sidebar() {
   return (
     <>
-      <div className="navbar desktop">
+      <div className="navbar-desktop">
         <ul className="navbar-nav">
           <a href="/">
             {" "}
@@ -23,7 +23,7 @@ export function Sidebar() {
           </li>
         </ul>
       </div>
-      <div className="navbar mobile">
+      <div className="navbar-mobile">
         <MobileSidebar />
       </div>
     </>
