@@ -15,9 +15,7 @@ form {
 .form-control {
   margin-bottom: 20px;
 }
-.active_ipt{
-  border: 1px solid black !important;
-}
+
 .btn-primary {
   background-color: #f2c5c5;
   color: black;
