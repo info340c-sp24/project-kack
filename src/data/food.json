@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "foodType": "Fruit",
+    "specificFood": "Apple",
+    "Quantity": 10,
+    "PickupDate": "2022-10-15",
+    "Status": "Available"
+  },
+  {
+    "id": 2,
+    "foodType": "Vegetable",
+    "specificFood": "Carrot",
+    "Quantity": 5,
+    "PickupDate": "2022-10-15",
+    "Status": "Available"
+  },
+  {
+    "id": 3,
+    "foodType": "Grain",
+    "specificFood": "Rice",
+    "Quantity": 20,
+    "PickupDate": "2022-10-15",
+    "Status": "Available"
+  },
+  {
+    "id": 4,
+    "foodType": "Protein",
+    "specificFood": "Chicken",
+    "Quantity": 2,
+    "PickupDate": "2022-10-15",
+    "Status": "Available"
+  },
+  {
+    "id": 5,
+    "foodType": "Dairy",
+    "specificFood": "Milk",
+    "Quantity": 1,
+    "PickupDate": "2022-10-15",
+    "Status": "Available"
+  },
+  {
+    "id": 6,
+    "foodType": "Fruit",
+    "specificFood": "Banana",
+    "Quantity": 5,
+    "PickupDate": "2022-10-15",
+    "Status": "Available"
+  },
+  {
+    "id": 7,
+    "foodType": "Vegetable",
+    "specificFood": "Broccoli",
+    "Quantity": 3,
+    "PickupDate": "2022-10-15",
+    "Status": "Available"
+  },
+  {
+    "id": 8,
+    "foodType": "Grain",
+    "specificFood": "Bread",
+    "Quantity": 1,
+    "PickupDate": "2022-10-15",
+    "Status": "Available"
+  },
+  {
+    "id": 9,
+    "foodType": "Protein",
+    "specificFood": "Beef",
+    "Quantity": 3,
+    "PickupDate": "2022-10-15",
+    "Status": "Available"
+  },
+  {
+    "id": 10,
+    "foodType": "Dairy",
+    "specificFood": "Cheese",
+    "Quantity": 1,
+    "PickupDate": "2022-10-15",
+    "Status": "Available"
+  }
+]

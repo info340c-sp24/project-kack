@@ -880,6 +880,62 @@ tbody > tr:hover {
   max-height: 100px;
   color: #f2c5c5;
 }
+/* This is the CSS for the food Request Table*/
+.FoodRequestPage-container {
+  background-color: #fce9e9;
+  height: 100%;
+}
+.Food-table {
+  margin-left: 16vw;
+  height: 100%;
+}
+
+.Food-Form {
+  margin-left: 16vw;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.Food-Form label {
+  font-weight: bold;
+}
+
+.Food-input {
+  width: 100%;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.Food-input input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#food-submit {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #fce9e9;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+#food-submit:hover {
+  background-color: #8d0a0a;
+}
+
+#food-submit:disabled {
+  background-color: #c8b7ba;
+  cursor: not-allowed;
+}
 
 /* This is the login page1 */
 
