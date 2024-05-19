@@ -4,7 +4,7 @@ import { DonarRow } from "./DonarRow";
 
 export function DonarTable({ donarsList }) {
   return (
-    <table className="table">
+    <table>
       <TableHeader
         columnNames={[
           "Donar Name",
