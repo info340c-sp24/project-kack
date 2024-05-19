@@ -9,8 +9,8 @@ body {
   border-collapse: collapse;
 }
 
-footer {
-  color: white;
+.footer {
+  color: black;
   margin-top: auto;
   font-size: 0.8rem;
   text-align: center;
@@ -18,14 +18,11 @@ footer {
 
 /* This is for the navbar */
 
-.navbar-mobile {
-  display: block;
-}
 .nav-logo {
   display: block;
   max-width: 100px;
-  height: 40px;
-  border-radius: 10px;
+  height: 100px;
+  border-radius: 20px;
 }
 .bm-burger-button {
   position: fixed;
@@ -64,6 +61,31 @@ footer {
 
 .menu-item:hover {
   background-color: #8d0a0a; /* Light purple, for hover effect */
+}
+
+/* This is for the sidebar */
+
+.sidebar-display {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sidebar-display {
+    display: flex;
+    background-color: #c55c78;
+    width: 15vw;
+    height: 100%;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    margin: 0;
+    color: white;
+  }
+
+  .mobile-sidebar {
+    display: none;
+  }
 }
 
 /* this is the map page */
@@ -170,13 +192,6 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: red;
-}
-
-footer {
-  color: white;
-  margin-top: auto;
-  font-size: 0.8rem;
-  text-align: center;
 }
 
 /* This is the main page */
@@ -470,7 +485,6 @@ footer {
   padding: 0 15px;
   margin-top: 10px;
 }
-
 .foodbank-cards-container {
   display: flex;
   flex-direction: row;
@@ -639,15 +653,6 @@ footer {
   color: white;
 }
 
-.body {
-  font-family: "Nunito Sans", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: white;
-  background-color: #000;
-  display: flex;
-}
-
 .ab_container {
   max-width: 1000px;
   margin: 0 auto;
@@ -699,11 +704,6 @@ footer {
 .team-member p {
   font-size: 0.9rem;
 }
-footer {
-  text-align: center;
-  margin-top: auto;
-  font-size: 0.8rem;
-}
 
 @media (min-width: 768px) {
   .container {
@@ -732,94 +732,124 @@ footer {
   }
 }
 
-/* Navbar */
-@media (min-width: 768px) {
-  .navbar {
-    text-decoration: none;
-    color: white;
-    background-color: white;
-    width: 90%;
-  }
-  .navbar-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 20px;
-    align-items: center;
-  }
-  .nav-item a {
-    .nav-item li {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-    .nav-logo {
-      width: 100%;
-      max-width: 40px;
-    }
-    .nav-item a:hover {
-      color: #c55c78;
-      text-decoration: underline;
-    }
-  }
+/* This is the CSS for the Table Page */
 
-  /* This is the CSS for the Table Page */
+.table-page {
+  background-color: #fce9e9;
+  height: 100%;
+  width: auto;
+}
 
-  table-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    flex: 1;
-  }
+.table-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-left: 16vw;
+  margin-right: 1vw;
+  font-family: Arial, sans-serif;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-  th {
-    height: 2rem;
-    text-align: left;
-    background-color: #f2c5c5;
-  }
+th {
+  height: 2rem;
+  text-align: left;
+  background-color: #f2c5c5;
+}
 
-  th,
-  td {
-    padding: 1em;
-    border-bottom: 1px solid #d3d3d3;
-    color: white;
-  }
+th,
+td {
+  padding: 1em;
+  border-bottom: 1px solid #d3d3d3;
+  color: white;
+}
 
-  tbody > tr:nth-child(even) {
-    background-color: #ce8e9a;
-    font-size: 0.8em;
-  }
-  tbody > tr:nth-child(odd) {
-    background-color: #c55c78;
-    font-size: 0.8em;
-  }
+tbody > tr:nth-child(even) {
+  background-color: #ce8e9a;
+  font-size: 0.8em;
+}
+tbody > tr:nth-child(odd) {
+  background-color: #c55c78;
+  font-size: 0.8em;
+}
 
-  tbody > tr:hover {
-    background-color: #8d0a0a;
-  }
+tbody > tr:hover {
+  background-color: #8d0a0a;
+}
 
-  @media (min-width: 768px) {
-    table-container {
-      flex-direction: row;
-    }
-  }
+.date-range-filter {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.date-range-filter input[type="date"] {
+  padding: 5px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.date-range-filter button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #c55c78;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: right;
+  font-family: Arial, sans-serif;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #c55c78;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.pagination button:hover {
+  background-color: #8d0a0a;
+}
+
+.pagination button:disabled {
+  background-color: #c8b7ba;
+  cursor: not-allowed;
+}
+
+.pagination input {
+  width: 50px;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.pagination span {
+  font-size: 14px;
 }
 
 /* This is the login page1 */
-
-/* General styles to reset */
-/* .kackLoginReset * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  background-color: #fce9e9;
-} */
 
 .kackLoginBody,
 .kackLoginH1,
@@ -1245,7 +1275,6 @@ footer {
 }
 
 /* LoginFoodBank------ */
-/**/
 
 .loginFoodBank {
   width: 100%;

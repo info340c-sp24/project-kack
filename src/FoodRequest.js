@@ -1,10 +1,11 @@
 import React from "react";
-import { Sidebar } from "./Sidebar";
+import { MobileSidebar, Sidebar } from "./MobileSidebar";
 
 const FoodRequest = () => {
   return (
     <div>
       Food_Request
+      <MobileSidebar />
       <Sidebar />
     </div>
   );
