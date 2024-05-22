@@ -12,8 +12,8 @@ export function MobileSidebar() {
         <a id="Dashboard" className="menu-item" href="/Dashboard">
           Dashboard
         </a>
-        <a id="DonarTable" className="menu-item" href="/Table">
-          Donars
+        <a id="DonorTable" className="menu-item" href="/Table">
+          Donors
         </a>
         <a id="FoodRequest" className="menu-item" href="/FoodRequest">
           Request
@@ -33,8 +33,8 @@ export function Sidebar() {
         <a id="Dashboard" className="menu-item" href="/Dashboard">
           Dashboard
         </a>
-        <a id="DonarTable" className="menu-item" href="/Table">
-          Donars
+        <a id="DonorTable" className="menu-item" href="/Table">
+          Donors
         </a>
         <a id="FoodRequest" className="menu-item" href="/FoodRequest">
           Request

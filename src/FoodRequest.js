@@ -28,7 +28,7 @@ const FoodRequest = () => {
           />
           <tbody>
             {foodList.map((foodList) => (
-              <FoodRow key={foodList.id} donarData={foodList} />
+              <FoodRow key={foodList.id} donorData={foodList} />
             ))}
           </tbody>
         </table>

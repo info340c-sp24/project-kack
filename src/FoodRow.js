@@ -1,13 +1,13 @@
 import React from "react";
 
-export function FoodRow({ donarData }) {
+export function FoodRow({ donorData }) {
   return (
     <tr className="table-rows">
-      <td>{donarData.foodType}</td>
-      <td>{donarData.specificFood}</td>
-      <td>{donarData.Quantity}</td>
-      <td>{donarData.PickupDate}</td>
-      <td>{donarData.Status}</td>
+      <td>{donorData.foodType}</td>
+      <td>{donorData.specificFood}</td>
+      <td>{donorData.Quantity}</td>
+      <td>{donorData.PickupDate}</td>
+      <td>{donorData.Status}</td>
     </tr>
   );
 }

@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { format, parse } from "date-fns";
 import { MobileSidebar, Sidebar } from "./MobileSidebar";
 import Footer from "./Footer";
-import donars from "./data/donars.json";
-import { DonarTable } from "./DonarTable";
+import donors from "./data/donors.json";
+import { DonorTable } from "./DonorTable";
 
 const Table = () => {
-  const [filteredDonars, setFilteredDonars] = useState(donars);
+  const [filteredDonors, setFilteredDonors] = useState(donors);
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,20 +15,20 @@ const Table = () => {
 
   const handleFilter = () => {
     if (startDate && endDate) {
-      const filtered = donars.filter((donar) => {
-        const donarDate = parse(donar.Date, "yyyy-MM-dd", new Date());
+      const filtered = donors.filter((donor) => {
+        const donorDate = parse(donor.Date, "yyyy-MM-dd", new Date());
         const parsedStartDate = parse(startDate, "yyyy-MM-dd", new Date());
         const parsedEndDate = parse(endDate, "yyyy-MM-dd", new Date());
 
-        return donarDate >= parsedStartDate && donarDate <= parsedEndDate;
+        return donorDate >= parsedStartDate && donorDate <= parsedEndDate;
       });
-      setFilteredDonars(filtered);
+      setFilteredDonors(filtered);
       setCurrentPage(1); // Reset to the first page after filtering
     }
   };
 
   const handleNextPage = () => {
-    if (currentPage < Math.ceil(filteredDonars.length / itemsPerPage)) {
+    if (currentPage < Math.ceil(filteredDonors.length / itemsPerPage)) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -44,14 +44,14 @@ const Table = () => {
     if (
       !isNaN(page) &&
       page > 0 &&
-      page <= Math.ceil(filteredDonars.length / itemsPerPage)
+      page <= Math.ceil(filteredDonors.length / itemsPerPage)
     ) {
       setCurrentPage(page);
     }
   };
 
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentItems = filteredDonars.slice(
+  const currentItems = filteredDonors.slice(
     startIndex,
     startIndex + itemsPerPage
   );
@@ -61,7 +61,7 @@ const Table = () => {
       <MobileSidebar />
       <Sidebar />
       <div className="table-container">
-        <h1 className="donar-title">Donar</h1>
+        <h1 className="donor-title">Donor</h1>
         <div className="date-range-filter">
           <input
             type="date"
@@ -79,7 +79,7 @@ const Table = () => {
             Filter
           </button>
         </div>
-        <DonarTable donarsList={currentItems} className="DonarTable" />
+        <DonorTable donorsList={currentItems} className="DonorTable" />
         <div className="pagination">
           <button onClick={handlePreviousPage} disabled={currentPage === 1}>
             Previous
@@ -91,13 +91,13 @@ const Table = () => {
             onBlur={handlePageInput}
             placeholder={currentPage}
             min="1"
-            max={Math.ceil(filteredDonars.length / itemsPerPage)}
+            max={Math.ceil(filteredDonors.length / itemsPerPage)}
           />
-          <span> / {Math.ceil(filteredDonars.length / itemsPerPage)}</span>
+          <span> / {Math.ceil(filteredDonors.length / itemsPerPage)}</span>
           <button
             onClick={handleNextPage}
             disabled={
-              currentPage >= Math.ceil(filteredDonars.length / itemsPerPage)
+              currentPage >= Math.ceil(filteredDonors.length / itemsPerPage)
             }
           >
             Next

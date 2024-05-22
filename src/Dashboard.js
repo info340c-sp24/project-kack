@@ -1,13 +1,13 @@
 import React from "react";
 import Footer from "./Footer";
 import { MobileSidebar, Sidebar } from "./MobileSidebar";
-import { DonarTable } from "./DonarTable";
-import donars from "./data/donars.json";
+import { DonorTable } from "./DonorTable";
+import donors from "./data/donors.json";
 import CardComponent from "./Cards.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Dashboard = () => {
-  const firstTenDonors = donars.slice(0, 10);
+  const firstTenDonors = donors.slice(0, 10);
   return (
     <div className="dashboard-page container-fluid">
       <div className="sidebars col-2">
@@ -36,9 +36,9 @@ const Dashboard = () => {
             label="Expenses"
             timePeriod="Last 24 hours"
           />
-          <h1>Donars</h1>
+          <h1>Donors</h1>
           <div className="tableRow row">
-            <DonarTable donarsList={firstTenDonors} className="DonarTable" />
+            <DonorTable donorsList={firstTenDonors} className="DonorTable" />
           </div>
         </div>
         <Footer />

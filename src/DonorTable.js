@@ -1,13 +1,13 @@
 import React from "react";
 import { TableHeader } from "./TableHeader";
-import { DonarRow } from "./DonarRow";
+import { DonorRow } from "./DonorRow";
 
-export function DonarTable({ donarsList }) {
+export function DonorTable({ donorsList }) {
   return (
     <table>
       <TableHeader
         columnNames={[
-          "Donar Name",
+          "Donor Name",
           "Location",
           "Date",
           "Phone Number",
@@ -17,8 +17,8 @@ export function DonarTable({ donarsList }) {
         ]}
       />
       <tbody>
-        {donarsList.map((donar) => (
-          <DonarRow key={donar.id} donarData={donar} />
+        {donorsList.map((donor) => (
+          <DonorRow key={donor.id} donorData={donor} />
         ))}
       </tbody>
     </table>
