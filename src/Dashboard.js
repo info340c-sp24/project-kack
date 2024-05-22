@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import { MobileSidebar, Sidebar } from "./MobileSidebar";
-import { DonorTable } from "./DonorTable";
-import donors from "./data/donors.json";
+import { TableHeader } from "./TableHeader";
+import { DashboardRow } from "./DashboardRow";
 import CardComponent from "./Cards.js";
+import { db } from "./index.js";
+import { ref, onValue } from "firebase/database";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Dashboard = () => {
+  const [donors, setDonors] = useState([]);
+
+  useEffect(() => {
+    const donorsRef = ref(db, "donations");
+    onValue(donorsRef, (snapshot) => {
+      const data = snapshot.val();
+      const donorsList = data ? Object.values(data) : [];
+      donorsList.sort((a, b) => b.timestamp - a.timestamp);
+      setDonors(donorsList);
+    });
+  }, []);
+
   const firstTenDonors = donors.slice(0, 10);
   return (
     <div className="dashboard-page container-fluid">
@@ -38,7 +52,25 @@ const Dashboard = () => {
           />
           <h1>Donors</h1>
           <div className="tableRow row">
-            <DonorTable donorsList={firstTenDonors} className="DonorTable" />
+            <table>
+              <TableHeader
+                columnNames={[
+                  "Name",
+                  "Email",
+                  "Phone",
+                  "Address",
+                  "City",
+                  "State",
+                  "Zip",
+                  "Donation",
+                ]}
+              />
+              <tbody>
+                {firstTenDonors.map((donors) => (
+                  <DashboardRow key={donors.user_id} donorData={donors} />
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
         <Footer />

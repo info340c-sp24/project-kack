@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Footer from "./Footer.js";
 import MobileNavbar from "./MobileNavbar.js";
+import { db } from "./index.js";
+import { ref, set, push } from "firebase/database";
+
 const FormComponent = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -13,6 +16,17 @@ const FormComponent = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const formData = {
+      name,
+      email,
+      phone,
+      address,
+      city,
+      state: userState,
+      zip,
+      donation,
+      timestamp: Date.now(),
+    };
     console.log({
       name,
       email,
@@ -22,7 +36,20 @@ const FormComponent = () => {
       userState,
       zip,
       donation,
+      timestamp: Date.now(),
     });
+
+    // put the form data into the database
+    const newDonationRef = push(ref(db, "donations"));
+    set(newDonationRef, formData)
+      .then(() => {
+        console.log("Data submitted successfully");
+        alert("Data submitted successfully");
+      })
+      .catch((error) => {
+        console.error("Error submitting data: ", error);
+        alert("Error submitting data");
+      });
 
     // Clear the form fields
     setName("");

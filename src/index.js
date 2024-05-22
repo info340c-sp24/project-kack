@@ -6,6 +6,7 @@ import App from "./App";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getDatabase } from "firebase/database";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -19,11 +20,16 @@ const firebaseConfig = {
   messagingSenderId: "854008262989",
   appId: "1:854008262989:web:808be53a4a979f5c6b0704",
   measurementId: "G-L8H9QQB87T",
+  databaseURL: "https://info-340-kack-default-rtdb.firebaseio.com/",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+// Initialize Realtime Database and get a reference to the service
+const db = getDatabase(app);
+
+export { db };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
