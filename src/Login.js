@@ -9,7 +9,7 @@ function Login() {
         <div className="kackLogoContainer">
           <img src={logo} alt="KACK FOOD BANK Logo" className="kackLoginLogo" />
         </div>
-
+        {/* test */}
         <div className="login-register">
           <h2 className="kackLoginH2">
             Choose your identity to login/Register:
