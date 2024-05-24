@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import AboutUs from "./AboutUs";
 import Mainpage from "./Mainpage";
 import Dashboard from "./Dashboard";
@@ -30,6 +30,7 @@ const App = () => {
           <Route path="/map" element={<MapComponent />} />
           <Route path="/table" element={<Table />} />
           <Route path="/footer" element={<Footer />} />
+          <Route path="*" element={<Navigate to="/" replace={true} />} />
         </Routes>
       </div>
     </Router>
