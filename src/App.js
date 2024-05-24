@@ -31,6 +31,7 @@ const App = () => {
           <Route path="/table" element={<Table />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="*" element={<Navigate to="/" replace={true} />} />
+          <Route path="/dashboard/:name" element={<Dashboard />} />
         </Routes>
       </div>
     </Router>
