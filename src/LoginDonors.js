@@ -60,7 +60,7 @@ export default function LoginDonors() {
             setPassword("");
           })
           .catch((error) => {
-            const errorCode = error.code;
+            //const errorCode = error.code;
             const errorMessage = error.message;
             alert(`Error: ${errorMessage}`);
             console.log(error); // Debugging line

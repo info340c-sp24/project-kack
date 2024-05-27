@@ -1,7 +1,13 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import "./index.css";
 import KackBlack from "./assets/Kack_black_icon.png";
 import { useNavigate } from "react-router-dom";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+} from "firebase/auth";
 
 function LoginFoodBank() {
   const [isSignUp, setIsSignUp] = useState(true);
@@ -9,39 +15,38 @@ function LoginFoodBank() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const [ifSignIn, setIfSignIn] = useState(false);
   const [email, setEmail] = useState("");
+
+  const auth = getAuth();
 
   const handleSwitch = () => {
     setIsSignUp(!isSignUp);
   };
 
-  console.log("isSignUp", isSignUp);
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    const users = JSON.parse(localStorage.getItem("foodUser")) || {
-      user: [],
-      pwd: [],
-    };
+
     if (!isSignUp) {
+      // Existing user sign-in
       if (userName === "") {
         alert("Please enter your account");
       } else if (password === "") {
         alert("Please enter your password");
-      } else if (!users.user.includes(userName)) {
-        alert("This account is not registered!");
       } else {
-        const index = users.user.indexOf(userName);
-        if (users.pwd[index] === password) {
-          alert("Login successfully");
-          navigate("/dashboard");
-          // Redirect user or change component state as needed
-        } else {
-          alert("Wrong Password");
-        }
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            alert("Login successfully");
+            console.log(userCredential); // Debugging line
+            navigate("/dashboard");
+          })
+          .catch((error) => {
+            const errorMessage = error.message;
+            alert(`Error: ${errorMessage}`);
+            console.log(error); // Debugging line
+          });
       }
     } else {
+      // New user registration
       if (userName.length < 3) {
         alert("The account number cannot be less than 3 digits");
       } else if (
@@ -50,23 +55,35 @@ function LoginFoodBank() {
         alert("The mailbox format is incorrect");
       } else if (password.length < 6) {
         alert("The password must contain at least 6 characters");
-      } else if (users.user.includes(userName)) {
-        alert("The account has been registered");
       } else {
-        users.user.push(userName);
-        users.pwd.push(password);
-        localStorage.setItem("foodUser", JSON.stringify(users));
-        alert("Registration success, please go to login");
-        setUserName("");
-        setEmail("");
-        setPassword("");
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            alert("Registration success, please go to login");
+            console.log(userCredential); // Debugging line
+            setUserName("");
+            setEmail("");
+            setPassword("");
+          })
+          .catch((error) => {
+            const errorMessage = error.message;
+            alert(`Error: ${errorMessage}`);
+            console.log(error); // Debugging line
+          });
       }
     }
   };
 
-  const signIn = () => {
-    // setIfSignIn(!ifSignIn);
-  };
+  // Set up authentication state observer
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in
+      const uid = user.uid;
+      console.log(`User signed in: ${uid}`); // Debugging line
+    } else {
+      // User is signed out
+      console.log("User signed out"); // Debugging line
+    }
+  });
 
   return (
     <div className="loginFoodBank">
@@ -76,7 +93,13 @@ function LoginFoodBank() {
           className="loginFoodBank_container loginFoodBank_b-container"
           id="b-container"
         >
-          <form className="loginFoodBank_form" id="b-form" method="" action="">
+          <form
+            className="loginFoodBank_form"
+            id="b-form"
+            method=""
+            action=""
+            onSubmit={handleSubmit}
+          >
             <h2 className="loginFoodBank_form_title loginFoodBank_title">
               {!isSignUp ? "Sign in to Website" : "Create Account"}
             </h2>
@@ -89,7 +112,7 @@ function LoginFoodBank() {
             </div>
             <span className="loginFoodBank_form__span">
               {!isSignUp
-                ? "Using UserName for SIGN In"
+                ? "Using UserName for SIGN IN"
                 : "Using email for registration"}
             </span>
             <input
@@ -116,10 +139,10 @@ function LoginFoodBank() {
               placeholder="Password"
             />
             <button
-              onClick={handleSubmit}
               className="loginFoodBank_form__button loginFoodBank_button loginFoodBank_submit loginFoodBank_sub_singIn"
+              type="submit"
             >
-              {isSignUp ? "SIGN Up" : "SIGN IN"}
+              {isSignUp ? "SIGN UP" : "SIGN IN"}
             </button>
           </form>
         </div>
@@ -138,14 +161,11 @@ function LoginFoodBank() {
             </h2>
             <p className="loginFoodBank_switch__description loginFoodBank_description">
               {isSignUp
-                ? "To keep connected with us please click sign in with your Username.If you do not have a FoodBank account you need to create an account."
-                : "Enter your foodBank's UserName on the right and start journey with us, If you do not have a account, please click SIGN Up to create a account."}
+                ? "To keep connected with us please click sign in with your Username. If you do not have a FoodBank account you need to create an account."
+                : "Enter your foodBank's UserName on the right and start journey with us. If you do not have a account, please click SIGN UP to create an account."}
             </p>
             <button
-              onClick={() => {
-                handleSwitch();
-                // navigate("/LoginDonors")
-              }}
+              onClick={handleSwitch}
               className="loginFoodBank_switch__button loginFoodBank_button loginFoodBank_switch-btn"
             >
               {!isSignUp ? "SIGN UP" : "SIGN IN"}
