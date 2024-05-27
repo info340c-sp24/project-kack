@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import KackBlack from "./assets/Kack_black_icon.png";
 import { useNavigate } from "react-router-dom";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+} from "firebase/auth";
 
 export default function LoginDonors() {
   const [userName, setUserName] = useState("");
@@ -9,30 +15,33 @@ export default function LoginDonors() {
   const navigate = useNavigate();
   const [ifSignIn, setIfSignIn] = useState(false);
 
+  const auth = getAuth();
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const users = JSON.parse(localStorage.getItem("foodUser")) || {
-      user: [],
-      pwd: [],
-    };
+
     if (ifSignIn) {
+      // Existing user sign-in
       if (userName === "") {
         alert("Please enter your account");
       } else if (password === "") {
         alert("Please enter your password");
-      } else if (!users.user.includes(userName)) {
-        alert("This account is not registered!");
       } else {
-        const index = users.user.indexOf(userName);
-        if (users.pwd[index] === password) {
-          alert("Login successfully");
-          navigate("/dashboard");
-          // Redirect user or change component state as needed
-        } else {
-          alert("Wrong Password");
-        }
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            alert("Login successfully");
+            console.log(userCredential); // Debugging line
+            navigate("/dashboard");
+          })
+          .catch((error) => {
+            //const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(`Error: ${errorMessage}`);
+            console.log(error); // Debugging line
+          });
       }
     } else {
+      // New user registration
       if (userName.length < 3) {
         alert("The account number cannot be less than 3 digits");
       } else if (
@@ -41,16 +50,21 @@ export default function LoginDonors() {
         alert("The mailbox format is incorrect");
       } else if (password.length < 6) {
         alert("The password must contain at least 6 characters");
-      } else if (users.user.includes(userName)) {
-        alert("The account has been registered");
       } else {
-        users.user.push(userName);
-        users.pwd.push(password);
-        localStorage.setItem("foodUser", JSON.stringify(users));
-        alert("Registration success, please go to login");
-        setUserName("");
-        setEmail("");
-        setPassword("");
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            alert("Registration success, please go to login");
+            console.log(userCredential); // Debugging line
+            setUserName("");
+            setEmail("");
+            setPassword("");
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(`Error: ${errorMessage}`);
+            console.log(error); // Debugging line
+          });
       }
     }
   };
@@ -58,6 +72,18 @@ export default function LoginDonors() {
   const singIn = () => {
     setIfSignIn(!ifSignIn);
   };
+
+  // Set up authentication state observer
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in
+      const uid = user.uid;
+      console.log(`User signed in: ${uid}`); // Debugging line
+    } else {
+      // User is signed out
+      console.log("User signed out"); // Debugging line
+    }
+  });
 
   return (
     <div className="loginDonors">
@@ -67,7 +93,13 @@ export default function LoginDonors() {
           id="a-container"
           style={ifSignIn ? { left: "-50px" } : { right: "-50px" }}
         >
-          <form className="loginDonors_form" id="a-form" method="" action="">
+          <form
+            className="loginDonors_form"
+            id="a-form"
+            method=""
+            action=""
+            onSubmit={handleSubmit}
+          >
             <h2 className="loginDonors_form_title loginDonors_title">
               {ifSignIn ? "Sign in to Website" : "Create Account"}
             </h2>
@@ -99,7 +131,6 @@ export default function LoginDonors() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             )}
-
             <input
               className="loginDonors_form__input loginDonors_up_pwd"
               type="password"
@@ -109,9 +140,9 @@ export default function LoginDonors() {
             />
             <button
               className="loginDonors_form__button loginDonors_button loginDonors_submit loginDonors_sub_singUp"
-              onClick={handleSubmit}
+              type="submit"
             >
-              SIGN IN
+              {ifSignIn ? "SIGN IN" : "SIGN UP"}
             </button>
           </form>
         </div>
@@ -128,14 +159,11 @@ export default function LoginDonors() {
             </h2>
             <p className="loginDonors_switch__description loginDonors_description">
               {ifSignIn
-                ? "Enter your Donor's UserName on the right and start journey with us,If you do not have a account, please click SIGN Up to create aaccount."
-                : "To keep connected with us please click sign in with your Donor'sUsername. If you do not have a donor account you need to create anaccount."}
+                ? "Enter your Donor's UserName on the right and start journey with us. If you do not have an account, please click SIGN UP to create an account."
+                : "To keep connected with us, please click sign in with your Donor's Username. If you do not have a donor account, you need to create an account."}
             </p>
             <button
-              onClick={() => {
-                // navigate("/LoginFoodBank")
-                singIn();
-              }}
+              onClick={singIn}
               className="loginDonors_switch__button loginDonors_button loginDonors_switch-btn"
             >
               {ifSignIn ? "SIGN UP" : "SIGN IN"}
