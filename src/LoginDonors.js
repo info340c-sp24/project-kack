@@ -22,11 +22,13 @@ export default function LoginDonors() {
 
     if (ifSignIn) {
       // Existing user sign-in
-      if (userName === "") {
-        alert("Please enter your account");
+      // *** Change: Updated to check email instead of userName ***
+      if (email === "") {
+        alert("Please enter your email");
       } else if (password === "") {
         alert("Please enter your password");
       } else {
+        // *** Change: Use email and password for sign-in ***
         signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
             alert("Login successfully");
@@ -112,25 +114,26 @@ export default function LoginDonors() {
             </div>
             <span className="loginDonors_form__span">
               {ifSignIn
-                ? "Using UserName for SIGN IN"
+                ? "Using email for SIGN IN"
                 : "Using email for registration"}
             </span>
-            <input
-              className="loginDonors_form__input loginDonors_up_userName"
-              type="text"
-              placeholder="UserName"
-              value={userName}
-              onChange={(e) => setUserName(e.target.value)}
-            />
+            {/* *** Change: Removed username input for sign-in *** */}
             {ifSignIn ? null : (
               <input
-                className="loginDonors_form__input loginDonors_up_Email"
+                className="loginDonors_form__input loginDonors_up_userName"
                 type="text"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                placeholder="UserName"
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
               />
             )}
+            <input
+              className="loginDonors_form__input loginDonors_up_Email"
+              type="text"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
             <input
               className="loginDonors_form__input loginDonors_up_pwd"
               type="password"
@@ -159,7 +162,7 @@ export default function LoginDonors() {
             </h2>
             <p className="loginDonors_switch__description loginDonors_description">
               {ifSignIn
-                ? "Enter your Donor's UserName on the right and start journey with us. If you do not have an account, please click SIGN UP to create an account."
+                ? "Enter your email and password to sign in. If you do not have an account, please click SIGN UP to create an account."
                 : "To keep connected with us, please click sign in with your Donor's Username. If you do not have a donor account, you need to create an account."}
             </p>
             <button

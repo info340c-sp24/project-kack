@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
   border-collapse: collapse;
 }
@@ -1031,7 +1031,7 @@ tbody > tr:hover {
 .login-foodbank-body::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   user-select: none;
 }
 
@@ -1683,7 +1683,7 @@ tbody > tr:hover {
   }
 }
 
-/* LoginDonors page */
+/* LoginDonors page ---------------------------------------------------------*/
 
 .loginDonors {
   width: 100%;

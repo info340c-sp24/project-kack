@@ -16,6 +16,7 @@ function LoginFoodBank() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
+  console.log(email);
 
   const auth = getAuth();
 
@@ -28,25 +29,33 @@ function LoginFoodBank() {
 
     if (!isSignUp) {
       // Existing user sign-in
-      if (userName === "") {
-        alert("Please enter your account");
+      // *** Change: Updated to check email instead of userName ***
+      if (email === "") {
+        alert("Please enter your email");
       } else if (password === "") {
         alert("Please enter your password");
       } else {
+        console.log(email);
+        console.log(password);
+
+        // *** Change: Use email and password for sign-in ***
         signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
-            alert("Login successfully");
-            console.log(userCredential); // Debugging line
+            // alert("Login successfully");
+            const user = userCredential.user;
+            console.log(user); // Debugging line
             navigate("/dashboard");
           })
           .catch((error) => {
+            const errorCode = error.code;
             const errorMessage = error.message;
-            alert(`Error: ${errorMessage}`);
-            console.log(error); // Debugging line
+            //alert(`Error: ${errorMessage}`);
+            console.log(errorCode, errorMessage); // Debugging line
           });
       }
     } else {
       // New user registration
+      //console.log("hi");
       if (userName.length < 3) {
         alert("The account number cannot be less than 3 digits");
       } else if (
@@ -112,23 +121,25 @@ function LoginFoodBank() {
             </div>
             <span className="loginFoodBank_form__span">
               {!isSignUp
-                ? "Using UserName for SIGN IN"
+                ? "Using email for SIGN IN"
                 : "Using email for registration"}
             </span>
+            {/* *** Change: Added email input for sign-in and sign-up *** */}
             <input
-              className="loginFoodBank_form__input loginFoodBank_in_userName"
+              className="loginDonors_form__input loginDonors_up_Email"
               type="text"
-              value={userName}
-              onChange={(e) => setUserName(e.target.value)}
-              placeholder="UserName"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
+            {/* *** Change: Conditionally render userName input only for sign-up *** */}
             {isSignUp ? (
               <input
-                className="loginDonors_form__input loginDonors_up_Email"
+                className="loginFoodBank_form__input loginFoodBank_in_userName"
                 type="text"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+                placeholder="UserName"
               />
             ) : null}
             <input
@@ -162,7 +173,7 @@ function LoginFoodBank() {
             <p className="loginFoodBank_switch__description loginFoodBank_description">
               {isSignUp
                 ? "To keep connected with us please click sign in with your Username. If you do not have a FoodBank account you need to create an account."
-                : "Enter your foodBank's UserName on the right and start journey with us. If you do not have a account, please click SIGN UP to create an account."}
+                : "Enter your email and password to sign in. If you do not have an account, please click SIGN UP to create an account."}
             </p>
             <button
               onClick={handleSwitch}
