@@ -1024,14 +1024,14 @@ tbody > tr:hover {
   }
 }
 
-/* This is the login page2, the login Foodbank account----------------------------*/
+/* This is login Foodbank account-----------------------------------------------------*/
 
 .login-foodbank-body,
 .login-foodbank-body::after,
 .login-foodbank-body::before {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   user-select: none;
 }
 
@@ -1362,7 +1362,7 @@ tbody > tr:hover {
   }
 }
 
-/* LoginFoodBank------ */
+/* LoginFoodBank---------------------- */
 
 .loginFoodBank {
   width: 100%;
@@ -1372,7 +1372,8 @@ tbody > tr:hover {
   justify-content: center;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
-  background-color: #f2c5c5;
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #0b0320 100%);
   color: #a0a5a8;
 }
 
@@ -1471,7 +1472,7 @@ tbody > tr:hover {
   align-items: center;
   position: absolute;
   top: 0;
-  width: 600px;
+  width: 650px;
   height: 100%;
   padding: 25px;
   background-color: #ecf0f3;
@@ -1550,7 +1551,7 @@ tbody > tr:hover {
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 1.15px;
-  background-color: #c55c78;
+  background-color: #f2769f;
   color: #f9f9f9;
   box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #f9f9f9;
   border: none;
@@ -1562,7 +1563,7 @@ tbody > tr:hover {
   box-shadow: 6px 6px 10px #d1d9e6, -6px -6px 10px #f9f9f9;
   transform: scale(0.985);
   transition: 0.6s;
-  background: #f2c5c5;
+  background: #ead7de;
 }
 
 /**/
@@ -1631,7 +1632,7 @@ tbody > tr:hover {
   box-shadow: 6px 6px 10px #d1d9e6, -6px -6px 10px #f9f9f9;
   transform: scale(0.985);
   transition: 0.6s;
-  background: #f2c5c5;
+  background: #f2769f;
 }
 
 .loginFoodBank_switch__button:active,
@@ -1683,7 +1684,7 @@ tbody > tr:hover {
   }
 }
 
-/* LoginDonors page ---------------------------------------------------------*/
+/* LoginDonors page */
 
 .loginDonors {
   width: 100%;
@@ -1694,7 +1695,7 @@ tbody > tr:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-image: linear-gradient(0deg, #ffdee9 0%, #c9b5ff 100%);
   color: #a0a5a8;
 }
 
@@ -1708,9 +1709,9 @@ tbody > tr:hover {
   padding: 25px;
   /*background-color: #fff;*/
   background-color: #ffdee9;
-  background-image: linear-gradient(45deg, #ffdee9 0%, #b5fffc 100%);
+  background-image: linear-gradient(45deg, #ffdee9 0%, #f1bcf7 100%);
 
-  box-shadow: 10px 10px 10px #b5fffc, -10px -10px 10px #ffdee9;
+  box-shadow: 10px 10px 10px #ee77c4, -10px -10px 10px #ffdee9;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -1799,7 +1800,7 @@ tbody > tr:hover {
   align-items: center;
   position: absolute;
   top: 0;
-  width: 600px;
+  width: 650px;
   height: 100%;
   padding: 25px;
   background-color: #ecf0f3;

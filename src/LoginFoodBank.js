@@ -159,7 +159,7 @@ function LoginFoodBank() {
         </div>
         <div
           ref={switchCnt}
-          style={!isSignUp ? { right: "-10px" } : { left: "-20px" }}
+          style={!isSignUp ? { right: "-10px" } : { left: "-1px" }}
           className="loginFoodBank_switch"
           id="switch-cnt"
         >
