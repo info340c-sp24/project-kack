@@ -33,7 +33,7 @@ export default function LoginDonors() {
           .then((userCredential) => {
             alert("Login successfully");
             console.log(userCredential); // Debugging line
-            navigate("/dashboard");
+            navigate("/Mainpage");
           })
           .catch((error) => {
             //const errorCode = error.code;
